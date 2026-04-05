@@ -1627,7 +1627,7 @@ a:focus, a:active {
 
 .bottom-nav {
   position: fixed;
-  bottom: 0;
+  inset: auto 0 0 0;
   z-index: 100;
   display: flex;
   gap: 20px;
@@ -2015,10 +2015,4 @@ a:focus, a:active {
   border-radius: 6px;
   min-width: 360px;
 }
-
-body {
-  display: none;
-}
-
-
 /*# sourceMappingURL=style.css.map */

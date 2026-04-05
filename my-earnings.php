@@ -1,13 +1,12 @@
 <?php 
 include 'config.php';
 
-$title = "MultiPay - Mobile recharge, postpaid, DTH, bills, wallet and more";
+$title = "My Earnings";
 $show_back = false;
-$show_location = true;
-$url = 'home';
+$show_location = false;
+$url = 'my-earnings';
 
 include 'components/header.php';
 ?>
-
 
 <?php include 'components/footer.php'; ?>

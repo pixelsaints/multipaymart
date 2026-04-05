@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="@@lang">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Basic Meta Tags -->
-  <title>MultiPay - Mobile recharge, postpaid, DTH, bills, wallet and more</title>
+  <title><?php echo $title; ?></title>
   <meta name="description" content="Mobile recharge, postpaid, DTH, bills, wallet and more" />
   <meta name="author" content="MultiPay" />
   <meta name="robots" content="index, follow" />
@@ -35,4 +34,11 @@
 </head>
 
 <body>
+
 <div class="wrapper">
+
+<?php
+  if (!empty($show_location) && $show_location === true) {
+    include 'location-bar.php';
+  }
+?>
