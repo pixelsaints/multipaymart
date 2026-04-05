@@ -27,7 +27,7 @@
 
 </div>
 
-<script src="<?php echo BASE_URL; ?>assets/js/bundle.js"></script>
-<script src="<?php echo BASE_URL; ?>assets/js/init.js"></script>
+<script src="/multipaymarts/assets/js/bundle.js"></script>
+<script src="/multipaymarts/assets/js/init.js"></script>
 </body>
 </html>
