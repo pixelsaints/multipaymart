@@ -1,0 +1,265 @@
+@use './functions' as *;
+
+.wrapper{
+  max-width: 420px;
+  margin: 0 auto;
+  background: $white;
+  min-height: 100vh;
+  box-shadow: 0 0 10px rgba( $pri-900, 0.1);
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.container-fluid{
+  width: 100%;
+}
+
+.scroll-container{
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.home-slider, .vouchers-slider{
+
+  .swiper{
+    padding-bottom: 32px;
+
+    .swiper-button{
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: White;
+        background: rgba( $gray-900, 0.5);
+        backdrop-filter: blur(10px);
+        width: 40px;
+        height: 40px;
+        border-radius: 24px;
+    
+        &:after {
+          font-size: 16px;
+        }
+      }
+
+      .swiper-button-next{
+        right: 24px;
+      }
+      
+      .swiper-button-prev{
+        left: 24px;
+      }
+    }
+
+    .swiper-pagination{
+      bottom: 0;
+
+      &-bullet{
+        background: $pri-400;
+        border-radius: 8px;
+        transition: all 0.4s ease-in;
+
+        &-active{
+          width: 16px;
+        }
+      }
+    } 
+  }
+}
+
+.vouchers-slider{
+  margin-top: 20px;
+}
+
+.more-link {
+  display: flex;
+  align-items: center;
+  color: $pri-500;
+  transition: all 0.4s ease;
+  font-size: 14px;
+
+  i {
+    margin-left: 8px;
+  }
+
+  &:hover {
+    color: $gray-900;
+  }
+}
+
+.cards{
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 16px;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+
+  .card{
+    min-width: 140px;
+    // max-width: 25%;
+    border-radius: 4px;
+    padding: 6px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    .icon-3d{
+      transform: translateY(-32px);
+      margin-bottom: -28px;
+      max-width: 80%;
+
+      &.taxi{
+        transform: translateY(-32px) scale(1.2);
+      }
+    }
+
+    span{
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      padding-bottom: 8px;
+      max-width: 70px;
+      line-height: 1.2;
+    }
+  }
+
+  &.partners{
+    padding-top: 40px;
+    padding-bottom: 0;
+
+    .card {
+      span {
+        font-size: 15px;
+        margin-top: 8px;
+        max-width: none;
+      }
+      
+    }
+  }
+}
+
+.util-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba($pri-400, 0.05), rgba($pri-400, 0.1));
+  border-radius: 4px;
+  padding: 8px 16px 0;
+
+  span {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    // max-width: 70px;
+    line-height: 1.2;
+    opacity: 0.6;
+  }
+
+  img{
+    max-height: 64px;
+    width: auto;
+  }
+}
+
+.offer-cards{
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+
+  .card {
+    min-width: 280px;
+    // max-width: 25%;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &.shop-earn {
+
+    .card{
+      min-width: 320px;
+    }
+  }
+}
+
+.shopping-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 16px;
+  min-height: 146px;
+  border-radius: 4px;
+  // background: linear-gradient(to bottom, $gray-100, $gray-200);
+  background: rgba(#ede9fe, 0.7);
+  overflow: hidden;
+
+  img{
+    margin: 24px 0 40px;
+    display: block;
+    max-width: 100%;
+    max-height: 50px;
+  }
+
+  .cashback-text{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 3px 6px;
+    text-align: center;
+    background: #ddd6ff;
+    font-size: 13px;
+  }
+
+  .btn-rewards{
+    font-size: 12px;
+    background: #fff;
+    position: absolute;
+    padding: 4px 8px;
+    bottom: 8px;
+    text-align: center;
+    display: none;
+  }
+
+
+}
+
+.voucher-cards{
+  margin-top: 20px;
+  
+  .card{
+    position: relative;
+    border-radius: 6px;
+    min-width: 360px;
+  }
+}

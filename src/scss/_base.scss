@@ -1,0 +1,27 @@
+@use './functions' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-base;
+  font-size: 16px;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: rgba($pri-50, 0.2);
+}
+
+::selection {
+  background: $pri-500;
+  color: #fff;
+}
+
+a {
+  outline: none;
+
+  &:focus, &:active{
+    outline: none;
+    box-shadow: none;
+  }
+}

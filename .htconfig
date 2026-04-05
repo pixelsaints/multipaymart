@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# If file exists, serve it
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Map clean URL to .php file
+RewriteRule ^([a-zA-Z0-9-]+)$ $1.php [L]
+
+# Default index
+DirectoryIndex index.php

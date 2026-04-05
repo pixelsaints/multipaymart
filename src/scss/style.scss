@@ -1,0 +1,28 @@
+// Scss Required
+@use './functions' as *;
+
+// Tailwind
+@use './tailwind';
+
+// Plugins
+
+@use './plugins/swiper';
+
+// Typography
+
+@use './typo';
+
+// Base
+
+@use './base';
+
+// Header
+@use './header';
+
+// Components
+
+@use './components/btns';
+
+// Layout
+
+@use './layout';
