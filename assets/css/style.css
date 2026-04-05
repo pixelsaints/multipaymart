@@ -499,43 +499,6 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 12px;
-  padding-left: 12px;
-}
-@media (min-width: 640px) {
-
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1320px) {
-
-  .container {
-    max-width: 1320px;
-  }
-}
-@media (min-width: 1440px) {
-
-  .container {
-    max-width: 1440px;
-  }
-}
 .visible {
   visibility: visible;
 }
@@ -584,17 +547,11 @@ video {
 .resize {
   resize: both;
 }
-.flex-col {
-  flex-direction: column;
-}
 .flex-wrap {
   flex-wrap: wrap;
 }
 .border {
   border-width: 1px;
-}
-.text-\[10vh\] {
-  font-size: 10vh;
 }
 .underline {
   text-decoration-line: underline;
@@ -1791,6 +1748,10 @@ a:focus, a:active {
 }
 .sidebar-footer .in-india img {
   max-width: 40px;
+}
+
+body {
+  overflow: hidden;
 }
 
 .wrapper {
