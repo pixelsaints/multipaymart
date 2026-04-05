@@ -34,4 +34,4 @@
   <link rel="icon" href="./assets/images/logo.png" />
 </head>
 
-<body class="@@bodyClass">
+<body>
