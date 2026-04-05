@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="MultiPay - Mobile recharge, postpaid, DTH, bills, wallet and more" />
   <meta name="twitter:description" content="Mobile recharge, postpaid, DTH, bills, wallet and more" />
 
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="<?php echo BASE_URL?>/assets/css/style.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
