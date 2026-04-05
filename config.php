@@ -1,3 +1,3 @@
 <?php
 
-define('BASE_URL', '/multipaymarts/');
+define('BASE_URL', '/multipaymart/');
