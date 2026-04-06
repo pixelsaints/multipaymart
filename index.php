@@ -1,7 +1,7 @@
 <?php 
 include 'config.php';
 
-$title = "MultiPay - Mobile recharge, postpaid, DTH, bills, wallet and more";
+$title = "MultiPay Mart";
 $show_back = false;
 $show_location = true;
 $topBar_style = "home-header";
