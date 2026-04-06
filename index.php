@@ -1,7 +1,7 @@
 <?php 
 include 'config.php';
 
-$title = "MultiPay Mart";
+$title = "MultiPay Mart - Home";
 $show_back = false;
 $show_location = true;
 $topBar_style = "home-header";
