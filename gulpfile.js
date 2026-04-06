@@ -26,7 +26,7 @@ const paths = {
   scripts: {
     vendor: [
       "src/js/vendors/jquery.min.js",
-      // "src/js/vendor/swiper-bundle.min.js",
+      "src/js/vendors/swiper-bundle.min.js",
     ],
     init: "src/js/init.js",
     dest: "assets/js"
@@ -110,13 +110,15 @@ function serve() {
   gulp.watch(paths.watchScripts, vendorScripts);
   gulp.watch(paths.scripts.init, initScript);
 
+  // Watch image changes
+  gulp.watch('assets/images/**/*.{jpg,jpeg,png,svg,gif,avif}').on('change', function (path) {
+    browserSync.reload();
+  });
+
   // Watch PHP files and reload browser
   gulp.watch("./**/*.php").on("change", function (path) {
     styles();
-    setTimeout(() => {
-      browserSync.reload();
-      console.log("PHP file changed:", path);
-    }, 100);
+    browserSync.reload();
   });
 }
 

@@ -1,9 +1,5 @@
 @use './functions' as *;
 
-body{
-  overflow: hidden;
-}
-
 .wrapper{
   max-width: 420px;
   margin: 0 auto;
@@ -19,15 +15,22 @@ body{
   width: 100%;
 }
 
-.scroll-container{
-  overflow-y: hidden;
+.h-scroll-container{
+  display: flex;
   overflow-x: auto;
+  overflow-y: visible;
+  gap: 16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 16px;
 }
 
 .home-slider, .vouchers-slider{
 
   .swiper{
-    padding-bottom: 32px;
+    padding-bottom: 24px;
 
     .swiper-button{
 
@@ -70,10 +73,6 @@ body{
   }
 }
 
-.vouchers-slider{
-  margin-top: 20px;
-}
-
 .more-link {
   display: flex;
   align-items: center;
@@ -90,21 +89,9 @@ body{
   }
 }
 
-.cards{
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  gap: 16px;
-  padding-top: 32px;
-  padding-bottom: 16px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  max-width: 100%;
-  -webkit-overflow-scrolling: touch;
+.cards-elevated{
 
-  .card{
-    min-width: 140px;
-    // max-width: 25%;
+  .card {
     border-radius: 4px;
     padding: 6px;
     text-decoration: none;
@@ -112,21 +99,21 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // overflow: hidden;
     position: relative;
     text-align: center;
+    overflow: visible;
 
-    .icon-3d{
+    .icon-3d {
       transform: translateY(-32px);
       margin-bottom: -28px;
       max-width: 80%;
 
-      &.taxi{
+      &.taxi {
         transform: translateY(-32px) scale(1.2);
       }
     }
 
-    span{
+    span {
       display: block;
       font-size: 14px;
       font-weight: 500;
@@ -135,6 +122,24 @@ body{
       line-height: 1.2;
     }
   }
+
+  &.partners{
+    padding-top: 20px;
+
+    .card{
+      img{
+        margin-bottom: -16px;
+      }
+
+      span{
+        font-size: 14px;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.cards{
 
   &.partners{
     padding-top: 40px;
