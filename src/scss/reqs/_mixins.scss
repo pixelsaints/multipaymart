@@ -11,6 +11,12 @@
   background-clip: text;
 }
 
+@mixin iconGradient{
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 // em conversion
 
 @function em($pixels, $context: $browser-context) {

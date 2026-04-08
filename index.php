@@ -10,7 +10,7 @@ $url = 'home';
 include 'components/header.php';
 ?>
 
-<section class="home-slider">
+<section class="home-slider my-4">
   <div class="container-fluid">
     <div class="swiper">
       <div class="swiper-wrapper">
@@ -43,7 +43,7 @@ include 'components/header.php';
 <!-- Vouchers/Near By Partners/Shopping sites/ Wallet Balance -->
 <section class="mt-6 mb-8">
   <div class="px-3 overflow-x-auto">
-    <div class="cards-elevated h-scroll-container">
+    <div class="cards style-1 h-scroll-container">
       <a href="https://multipaymart.com/vouchers.php" class="card min-w-[132px] bg-gradient-to-b from-cyan-100 to-cyan-200">
         <img src="./assets/images/icons/gift-voucher-icon.avif" alt="" class="icon-3d">
         <span>Gift Vouchers</span>
@@ -213,30 +213,29 @@ include 'components/header.php';
       <h3 class="font-medium">Near By Partners</h3>
       <a href="#" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-    <div class="cards-elevated partners h-scroll-container mt-6">
-      <a href="https://multipaymart.com/food.php" class="card min-w-[140px] bg-gradient-to-b from-orange-100 to-orange-200">
+    <div class="cards style-1 partners h-scroll-container mt-6">
+      <a href="<?php echo BASE_URL?>/food.php" class="card min-w-[140px] bg-gradient-to-b from-orange-100 to-orange-200">
         <img src="assets/images/partner/food.avif" alt="" class="icon-3d">
         <span>Food</span>
       </a>
-      <a href="https://multipaymart.com/grocery.php" class="card min-w-[140px] bg-gradient-to-b from-indigo-100 to-indigo-200">
+      <a href="<?php echo BASE_URL?>/grocery.php" class="card min-w-[140px] bg-gradient-to-b from-indigo-100 to-indigo-200">
         <img src="assets/images/partner/groceries.avif" alt="" class="icon-3d">
         <span>Groceries</span>
       </a>
-      <a href="https://multipaymart.com/medicines.php" class="card min-w-[140px] bg-gradient-to-b from-blue-100 to-blue-200">
+      <a href="<?php echo BASE_URL?>/medicines.php" class="card min-w-[140px] bg-gradient-to-b from-blue-100 to-blue-200">
         <img src="assets/images/partner/medicine.avif" alt="" class="icon-3d">
         <span>Medicine</span>
       </a>
-      <a href="https://multipaymart.com/medicines.php" class="card min-w-[140px] bg-gradient-to-b from-yellow-100 to-yellow-200">
+      <a href="<?php echo BASE_URL?>/medicines.php" class="card min-w-[140px] bg-gradient-to-b from-yellow-100 to-yellow-200">
         <img src="assets/images/partner/taxi-icon.avif" alt="" class="icon-3d taxi">
         <span>Taxi</span>
       </a>
-      <a class="card min-w-[140px] bg-gradient-to-b from-green-100 to-green-200">
+      <a href="<?php echo BASE_URL?>/clothing.php" class="card min-w-[140px] bg-gradient-to-b from-green-100 to-green-200">
         <img src="assets/images/partner/cloting.avif" alt="" class="icon-3d">
         <span>Clothing</span>
       </a>
     </div>
   </div>
 </section>
-
 
 <?php include 'components/footer.php'; ?>

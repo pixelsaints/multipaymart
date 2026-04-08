@@ -1,200 +1,150 @@
 @use './functions' as *;
 
-
-.header-main{
-  position: sticky;
+.header{
   width: 100%;
-  z-index: 10;
-  top: 0;
   padding: 16px;
-  background: rgba(#f5f5f4, 0);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: solid 1px #e7e5e4;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $white;
+  box-shadow: 0 4px 8px -8px rgba($slate-900, 0.2);
 
-  .logo {
+  a.icon-link{
+    width: 32px;
+    height: 32px;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
-    
+    justify-content: center;
+    border-radius: 32px;
+    background: $slate-100;
+    border: solid 1px $slate-200;
 
-    a {
-      font-size: 20px;
+    i{
+      font-size: 16px;
+      background: linear-gradient(to bottom, $slate-600, $slate-800);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+
+  .right, .left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .left{
+    gap: 8px;
+  }
+
+  .right{
+    margin-left: auto;
+    gap: 14px;
+  }
+
+  a.logo{
+    img{
+      max-width: 24px;
+      height: auto;
+    }
+
+    span{
+      color: $pri-600;
+      font-size: 18px;
       font-weight: 500;
-      letter-spacing: 0.5px;
-      color: $pri-400;
+      line-height: 1;
+    }
+  }
+  
+  a.ham{
+    gap: 4px;
+    background: transparent;
+    align-items: flex-start;
+    border: none;
 
-      &.ham{
-        display: flex;
-        flex-direction: column;
-        width: 24px;
-        margin-right: 12px;
-        gap: 6px;
+    .bar {
+      width: 100%;
+      height: 2px;
+      max-width: 20px;
+      background: $gray-800;
+      border-radius: 8px;
+      
+      &:nth-child(3){
+        max-width: 12px;
+      }
 
-        .bar{
-          width: 100%;
-          height: 2px;
-          background: $pri-400;
-
-          &:nth-child(1){
-            width: 90%;
-          }
-
-          &:nth-child(2){
-            width: 70%;
-          }
-        }
+      &:nth-child(1){
+        max-width: 16px;
       }
     }
   }
 
-  .account{
-    display: flex;
-    gap: 12px;
-    margin-left: auto;
-    font-size: 20px;
+  a.rewards{
+    flex-direction: row;
+    gap: 9px;
+    background: linear-gradient(to bottom, $sec-50, $sec-100);
+    border: solid 1px $sec-100;
+    width: fit-content;
+    padding-left: 14px;
+    padding-right: 14px;
 
-    a{
+    i{
+      top: -1px;
+      color: $sec-600;
+    }
+
+    span{
+      font-weight: bold;
+      color: $sec-600;
+    }
+  }
+
+  .my-account{
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    background: $sec-100;
+
+    i{      
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(to bottom, $gray-100, $gray-200);
-      border-radius: 24px;
-      height: 32px;
-      width: 32px;
+      top: -1px;
+    }
+
+    span.number{
+      position: absolute;
+      width: 2px;
+      height: 24px;
       text-align: center;
-
-      &.ham {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        width: 24px;
-        margin-left: 8px;
-        background: transparent;
-        gap: 6px;
-    
-        .bar {
-          width: 100%;
-          height: 2px;
-          background: $pri-400;
-    
-          &:nth-child(1) {
-            width: 90%;
-          }
-    
-          &:nth-child(2) {
-            width: 70%;
-          }
-        }
-      }
-
-      i{
-        font-size: 16px;
-        background: linear-gradient(to top, $gray-800, $gray-500);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-
-      .number {
-        text-align: center;
-        position: absolute;
-        padding: 2px 8px;
-        right: 0;
-        top: -4px;
-        font-size: 11px;
-        font-weight: bold;
-        color: $white;
-        border-radius: 20px;
-        top: 0px;
-        right: -6px;
-        background: $pri-400;
-        transform: scale(0.9);
-      }
-
-      &.cart {
-        position: relative;
-      }
-
-      &.notifications{
-        position: relative;
-        background: linear-gradient( to bottom, $gray-100, $gray-200);
-
-        i{
-          position: relative;
-          top: 1px;
-          transform: scale(1.01);
-        }
-
-        .number{
-          top: 0px;
-          right: -2px;
-          background: $pri-400;
-          transform: scale(0.9);
-        }
-      }
-
-      &.rewards{
-        width: auto;
-        padding: 0 10px;
-        background: rgba($sec-200, 0.45);
-        background: linear-gradient(to bottom, rgba($sec-200, 0.45), rgba($sec-200, 0.8));
-        color: $sec-700;
-
-        i{
-          background: linear-gradient(to top, $sec-700, $sec-400);
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
-        }
-
-        span{
-          font-weight: 500;
-          font-size: 16px;
-          display: flex;
-          margin-right: 8px;
-        }
-      }
     }
   }
 }
 
-.location {
-  padding: 12px 16px;
+.location-bar{
+  padding: 16px 8px;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   overflow: hidden;
   align-items: center;
+  justify-content: space-between;
   min-width: 0;
-  background: #fafaf9;
+  background: rgba($pri-100, 0.2);
+  width: 100%;
 
-  &-content {
-    display: block;
-    min-width: 0;
+  & .flex{
+    width: 85%;
+    gap: 8px;
   }
 
-  &-title {
-    font-size: 12px;
-    color: $gray-600;
-    margin-bottom: 4px;
-    line-height: 1;
-    display: block;
-  }
-
-  i {
-    font-size: 20px;
-    margin-right: 12px;
-    display: block;
-    color: $gray-800;
-  }
-
-  &-name {
+  .location-name {
     color: $gray-800;
     display: block;
-    max-width: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -214,8 +164,12 @@
   width: 100%;
   margin: 0 auto;
   max-width: 420px;
-  border-top: solid 1px $gray-200;
-  background: $white;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.3px);
+  -webkit-backdrop-filter: blur(13.3px);
+  border: 1px solid rgba(255, 255, 255, 0.78);
 
   a{
     display: flex;
@@ -226,8 +180,7 @@
 
     i{
       font-size: 24px;
-      color: $gray-400;
-      background: linear-gradient(to top, $gray-400, $gray-200);
+      background: linear-gradient(to bottom, $gray-400, $gray-600);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;

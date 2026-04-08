@@ -43,8 +43,7 @@
   if (!empty($show_location) && $show_location === true) {
     include 'header-elements/location-bar.php';
   }
-
+  
   include 'header-elements/top-bar.php';
   include 'side-nav.php';
 ?>
-

@@ -57,25 +57,20 @@ switch ($current_style) {
 	case 'home-header': ?>
 		<div class="header">
 			<div class="left">
-				<a href="javascript(void(0)" class="ham icon-link">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
+				<a href="javascript(void(0)" class="ham">
+
 				</a>
 				<a href="index.php" class="logo flex items-center gap-2">
-					<img src="./assets/images/logo.png" alt="">
+					<img src="./assets/images/logo.png" class="w-7" alt="">
 					<span>MultiPay</span>
 				</a>
 			</div>
 			<div class="right">
-				<a href="#" class="rewards icon-link">
-					<i class="fa-solid fa-coins"></i>
+				<a href="#" class="rewards px-2 py-1 rounded">
 					<span>100</span>
+					<i class="fa-solid fa-coins"></i>
 				</a>
-				<a href="#" class="my-account icon-link">
-					<i class="fa-solid fa-bell"></i>
-				</a>
-				<a href="#" class="my-account icon-link">
+				<a href="#" class="my-account">
 					<i class="fa-solid fa-user"></i>
 				</a>
 			</div>
@@ -89,10 +84,11 @@ switch ($current_style) {
 					<a href="javascript:history.back()" class="back-btn">
 						<i class="fa-solid fa-arrow-left"></i>
 					</a>
+
+					<div class="title text-lg font-semibold">
+						<?php echo $title; ?>
+					</div>
 				<?php endif; ?>
-				<div class="title text-lg font-semibold">
-					<?php echo $title; ?>
-				</div>
 			</div>
 
 			<?php if ($show_notifications): ?>
@@ -105,5 +101,23 @@ switch ($current_style) {
 
 	case 'default':
 	default: ?>
+	<div class="header flex items-center justify-between p-4 bg-gray-100 shadow-md">
+		<a href="javascript:history.back()" class="back-btn">
+			<i class="fa-solid fa-arrow-left"></i>
+		</a>
+		<div class="title text-lg font-semibold pl-4">
+			<?php echo $title; ?>
+		</div>
+
+		<div class="account flex items-center gap-4">
+			<a href="#" class="rewards bg-yellow-100 px-2 py-1 rounded">
+				<span>100</span>
+				<i class="fa-solid fa-coins"></i>
+			</a>
+			<a href="#" class="my-account">
+				<i class="fa-solid fa-user"></i>
+			</a>
+		</div>
+	</div>
 
 <?php } ?>
