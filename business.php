@@ -251,7 +251,7 @@ include 'components/header.php';
       </div>
     </div>
   </div>
-</section>
+</section> 
 
 
 <?php include 'components/footer.php'; ?>
