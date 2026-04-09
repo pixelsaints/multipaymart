@@ -2,7 +2,7 @@
 include 'config.php';
 
 $title = "Reports";
-$url = 'my-earnings';
+$url = 'reports';
 
 $topBar_style = [
   'page-header' => [
