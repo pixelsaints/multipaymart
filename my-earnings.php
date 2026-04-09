@@ -55,28 +55,28 @@ include 'components/header.php';
     <div class="grid grid-cols-2 gap-3 items-center justify-between">
       <div class="flex bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
         <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-0">Cashback Point</span>
+          <span class="text-[14px] text-slate-600 mt-2 mb-0">Cashback Points</span>
           <span class="text-[28px] mt-0 font-semibold text-sec-500">2,500</span>
         </div>
       </div>
 
       <div class="flex bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
         <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-0">Level Cashback Point</span>
+          <span class="text-[14px] text-slate-600 mt-2 mb-0">Level Cashback Points</span>
           <span class="text-[28px] mt-0 font-semibold text-sec-500">1500</span>
         </div>
       </div>
       
       <div class="flex bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
         <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-0">Bonus Cash Point</span>
+          <span class="text-[14px] text-slate-600 mt-2 mb-0">Bonus Cash Points</span>
           <span class="text-[28px] mt-0 font-semibold text-sec-500">500</span>
         </div>
       </div>
 
       <div class="flex bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
         <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-0">Cash Back From Vendor</span>
+          <span class="text-[14px] text-slate-600 mt-2 mb-0">Cashback From Vendors</span>
           <span class="text-[28px] mt-0 font-semibold text-sec-500">500</span>
         </div>
       </div>
