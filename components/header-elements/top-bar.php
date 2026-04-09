@@ -29,6 +29,8 @@ if (is_array($topBar_style) && isset($topBar_style['page-header'])) {
 $title = $title ?? "MultiPay Mart";
 $show_back = false;
 $show_notifications = true;
+// $show_coins =  $show_coins ? false;
+// $show_profile = $show_profile ? false;
 
 // Handle array-based style first
 if (is_array($topBar_style)) {
@@ -36,6 +38,9 @@ if (is_array($topBar_style)) {
 		$title = $topBar_style['page-header']['top-bar-title'] ?? 'Page';
 		$show_back = $topBar_style['page-header']['show_back'] ?? false;
 		$show_notifications = $topBar_style['page-header']['show_notifications'] ?? true;
+		$show_coins = $topBar_style['page-header']['show_coins'] ?? false;
+		$show_profile = $topBar_style['page-header']['show_profile'] ?? false;
+
 		$current_style = 'page-header';
 	} else {
 		$current_style = 'default';
@@ -89,17 +94,38 @@ switch ($current_style) {
 					<a href="javascript:history.back()" class="back-btn">
 						<i class="fa-solid fa-arrow-left"></i>
 					</a>
+				<?php else : ?>
+					<a href="javascript(void(0)" class="ham icon-link">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</a>
 				<?php endif; ?>
 				<div class="title text-lg font-semibold">
 					<?php echo $title; ?>
 				</div>
 			</div>
+			
+			<div class="right">
+				<?php if($show_coins) : ?>
+					<a href="#" class="rewards icon-link">
+						<i class="fa-solid fa-coins"></i>
+						<span>100</span>
+					</a>
+				<?php endif; ?>
 
-			<?php if ($show_notifications): ?>
-				<a href="#" class="notifications relative">
-					<i class="fa-solid fa-bell"></i>
-				</a>
-			<?php endif; ?>
+				<?php if ($show_profile): ?>
+					<a href="#" class="my-account icon-link">
+						<i class="fa-solid fa-user"></i>
+					</a>
+				<?php endif; ?>
+
+				<?php if ($show_notifications): ?>
+					<a href="#" class="my-account icon-link">
+						<i class="fa-solid fa-bell"></i>
+					</a>
+				<?php endif; ?>
+			</div>
 		</div>
 	<?php break;
 

@@ -39,12 +39,16 @@
   }
 
   .left{
-    gap: 8px;
+    gap: 12px;
   }
 
   .right{
     margin-left: auto;
     gap: 14px;
+  }
+
+  .title{
+    color: $pri-600;
   }
 
   a.logo{
@@ -199,7 +203,7 @@
       }
 
       i{
-        background: linear-gradient(to top, $pri-400, $pri-100);
+        background: linear-gradient(to top, $pri-600, $pri-400);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;

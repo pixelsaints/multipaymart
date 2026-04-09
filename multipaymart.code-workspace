@@ -5,8 +5,8 @@
 		}
 	],
 	"settings": {
-  	"tailwindCSS.includeLanguages": {
-    	"php": "html"
-  	}
+		"tailwindCSS.includeLanguages": {
+  		"php": "html"
+		}
 	}
 }

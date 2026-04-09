@@ -41,7 +41,7 @@ include 'components/header.php';
 </section>
 
 <!-- Vouchers/Near By Partners/Shopping sites/ Wallet Balance -->
-<section class="mt-6 mb-8">
+<section class="mt-6 mb-0">
   <div class="px-3 overflow-x-auto">
     <div class="cards style-1 h-scroll-container">
       <a href="https://multipaymart.com/vouchers.php" class="card min-w-[132px] bg-gradient-to-b from-cyan-100 to-cyan-200">
@@ -65,46 +65,46 @@ include 'components/header.php';
 </section>
 
 <!-- Utilities & Pay Bills -->
-<section class="my-8">
+<section class="mt-4 mb-8">
   <div class="container">
     <div class="flex flex-row items-center justify-between">
       <h3 class="font-medium">Utilities & Pay Bills</h3>
       <a href="<?php echo BASE_URL?>/recharge.php" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-    <div class="grid grid-cols-3 gap-3 mt-6">
-      <a href="https://multipaymart.com/mobile-recharge.php" class="util-card">
+    <div class="grid grid-cols-3 gap-4 mt-6">
+      <a href="https://multipaymart.com/mobile-recharge.php" class="cards style-2">
         <img src="./assets/images/icons/utils-mobile-icon.avif" alt="">
         <span>Mobile</span>
       </a>
-      <a href="https://multipaymart.com/credit-card.php" class="util-card">
+      <a href="https://multipaymart.com/credit-card.php" class="cards style-2">
         <img src="./assets/images/icons/utils-credit-card-icon.avif" alt="">
         <span>Credit Card</span>
       </a>
-      <a href="https://multipaymart.com/dth.php" class="util-card">
+      <a href="https://multipaymart.com/dth.php" class="cards style-2">
         <img class="scale-x-[-1]" src="./assets/images/icons/utils-dth-icon.avif" alt="">
         <span>DTH</span>
       </a>
-      <a href="https://multipaymart.com/landline.php" class="util-card">
+      <a href="https://multipaymart.com/landline.php" class="cards style-2">
         <img src="./assets/images/icons/utils-landline-icon.avif" alt="">
         <span>Landline</span>
       </a>
-      <a href="https://multipaymart.com/fastag.php" class="util-card">
+      <a href="https://multipaymart.com/fastag.php" class="cards style-2">
         <img src="./assets/images/icons/utils-toll-icon.avif" alt="">
         <span>FastTag</span>
       </a>
-      <a href="https://multipaymart.com/recharge.php" class="util-card">
+      <a href="https://multipaymart.com/recharge.php" class="cards style-2">
         <img src="./assets/images/icons/utils-broadband-icon.avif" alt="">
         <span>Broadband</span>
       </a>
-      <a href="https://multipaymart.com/electricity-bill.php" class="util-card">
+      <a href="https://multipaymart.com/electricity-bill.php" class="cards style-2">
         <img src="./assets/images/icons/utils-elec-icon.avif" alt="">
         <span>Electricity</span>
       </a>
-      <a href="https://multipaymart.com/lpg-gas.php" class="util-card">
+      <a href="https://multipaymart.com/lpg-gas.php" class="cards style-2">
         <img src="./assets/images/icons/utils-gas-icon.avif" alt="">
         <span>LPG Gas</span>
       </a>
-      <a href="https://multipaymart.com/water-bill.php" class="util-card">
+      <a href="https://multipaymart.com/water-bill.php" class="cards style-2">
         <img src="./assets/images/icons/utils-water-icon.avif" alt="">
         <span>Water Bill</span>
       </a>
@@ -119,7 +119,7 @@ include 'components/header.php';
       <h3 class="font-medium">Exciting Offers</h3>
       <a href="#" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-    <div class="offer-cards mt-6">
+    <div class="offer-cards mt-5">
       <a class="card">
         <img src="./assets/images/banners/offer-banner-1.jpg" alt="" />
       </a>
@@ -213,7 +213,7 @@ include 'components/header.php';
       <h3 class="font-medium">Near By Partners</h3>
       <a href="#" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-    <div class="cards style-1 partners h-scroll-container mt-6">
+    <div class="cards style-1 partners h-scroll-container mt-0">
       <a href="<?php echo BASE_URL?>/food.php" class="card min-w-[140px] bg-gradient-to-b from-orange-100 to-orange-200">
         <img src="assets/images/partner/food.avif" alt="" class="icon-3d">
         <span>Food</span>
