@@ -96,7 +96,7 @@ switch ($current_style) {
 						<i class="fa-solid fa-arrow-left"></i>
 					</a>
 				<?php elseif ($show_home) : ?>
-					<a href="<ss">
+					<a href="<?= BASE_URL ?>/">
 						<i class="fa-solid fa-home"></i>
 					</a>
 				<?php else : ?>
