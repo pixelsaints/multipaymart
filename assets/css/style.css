@@ -987,6 +987,9 @@ video {
 .text-\[18px\] {
   font-size: 18px;
 }
+.text-\[20px\] {
+  font-size: 20px;
+}
 .text-\[24px\] {
   font-size: 24px;
 }
@@ -1006,9 +1009,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-\[20px\] {
-  font-size: 20px;
 }
 .font-medium {
   font-weight: 500;
@@ -2378,7 +2378,7 @@ body {
 .cards.style-1 .card .icon-3d {
   transform: translateY(-32px);
   margin-bottom: -28px;
-  max-width: 80%;
+  max-width: 80px;
 }
 .cards.style-1 .card .icon-3d.taxi {
   transform: translateY(-32px) scale(1.2);
@@ -2426,7 +2426,7 @@ body {
   opacity: 0.6;
 }
 .cards.style-2 img {
-  max-height: 64px;
+  max-height: 56px;
   width: auto;
 }
 

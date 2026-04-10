@@ -125,7 +125,7 @@ body{
       .icon-3d {
         transform: translateY(-32px);
         margin-bottom: -28px;
-        max-width: 80%;
+        max-width: 80px;
   
         &.taxi {
           transform: translateY(-32px) scale(1.2);
@@ -178,13 +178,12 @@ body{
       font-weight: 500;
       padding-top: 8px;
       padding-bottom: 8px;
-      // max-width: 70px;
       line-height: 1.2;
       opacity: 0.6;
     }
   
     img {
-      max-height: 64px;
+      max-height: 56px;
       width: auto;
     }
   }
