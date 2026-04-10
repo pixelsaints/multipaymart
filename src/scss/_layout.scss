@@ -31,17 +31,20 @@ body{
   display: flex;
   overflow-x: auto;
   overflow-y: auto;
-  gap: 16px;
+  gap: 12px;
   scrollbar-width: none;
   -ms-overflow-style: none;
   max-width: 100%;
   -webkit-overflow-scrolling: touch;
   padding-top: 16px;
   padding-bottom: 24px;
+
+  &.p-0{
+    padding: 0;
+  }
 }
 
 .home-slider, .vouchers-slider{
-  padding: 8px;
 
   .swiper{
     // overflow: hidden;
@@ -193,7 +196,7 @@ body{
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
-  gap: 16px;
+  gap: 12px;
   scrollbar-width: none;
   -ms-overflow-style: none;
   max-width: 100%;
@@ -341,15 +344,15 @@ body{
 
     &-name{
       color: rgba($slate-800, 1);
-      font-size: 16px;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: 600;
       max-width: 100%;
       @include text-truncate;
     }
 
     &-contact{
-      color: rgba($slate-800, 0.6);
-      font-size: 13px;
+      color: rgba($slate-800, 0.8);
+      font-size: 14px;
     }
 
     &-id{
@@ -416,7 +419,7 @@ body{
   border-radius: 8px;
   @include boxShadow($sec-300);
   min-height: 100px;
-  padding: 8px 12px 12px;
+  padding: 8px;
 
   .text-md{
     font-size: 13px;

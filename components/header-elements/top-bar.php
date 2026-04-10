@@ -37,6 +37,7 @@ if (is_array($topBar_style)) {
 	if (isset($topBar_style['page-header'])) {
 		$title = $topBar_style['page-header']['top-bar-title'] ?? 'Page';
 		$show_back = $topBar_style['page-header']['show_back'] ?? false;
+		$show_home = $topBar_style['page-header']['show_home'] ?? false;
 		$show_notifications = $topBar_style['page-header']['show_notifications'] ?? true;
 		$show_coins = $topBar_style['page-header']['show_coins'] ?? false;
 		$show_profile = $topBar_style['page-header']['show_profile'] ?? false;
@@ -93,6 +94,10 @@ switch ($current_style) {
 				<?php if ($show_back): ?>
 					<a href="javascript:history.back()" class="back-btn">
 						<i class="fa-solid fa-arrow-left"></i>
+					</a>
+				<?php elseif ($show_home) : ?>
+					<a href="<ss">
+						<i class="fa-solid fa-home"></i>
 					</a>
 				<?php else : ?>
 					<a href="javascript(void(0)" class="ham icon-link">

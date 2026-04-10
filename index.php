@@ -11,11 +11,11 @@ include 'components/header.php';
 ?>
 
 <section class="home-slider my-4">
-  <div class="container-fluid">
+  <div class="container">
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <a href="./card.php">
+          <a href="<?= BASE_URL?>/card.php">
             <img src="./assets/images/banners/multipay-card.avif" alt="">
           </a>
         </div>
@@ -42,9 +42,9 @@ include 'components/header.php';
 
 <!-- Vouchers/Near By Partners/Shopping sites/ Wallet Balance -->
 <section class="mt-6 mb-0">
-  <div class="px-3 overflow-x-auto">
+  <div class="container overflow-x-auto">
     <div class="cards style-1 h-scroll-container">
-      <a href="https://multipaymart.com/vouchers.php" class="card min-w-[132px] bg-gradient-to-b from-cyan-100 to-cyan-200">
+      <a href="<?= BASE_URL; ?>/vouchers.php" class="card min-w-[132px] bg-gradient-to-b from-cyan-100 to-cyan-200">
         <img src="./assets/images/icons/gift-voucher-icon.avif" alt="" class="icon-3d">
         <span>Gift Vouchers</span>
       </a>
@@ -71,7 +71,7 @@ include 'components/header.php';
       <h3 class="font-medium">Utilities & Pay Bills</h3>
       <a href="<?php echo BASE_URL?>/recharge.php" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-    <div class="grid grid-cols-3 gap-4 mt-6">
+    <div class="grid grid-cols-3 gap-3 mt-6">
       <a href="https://multipaymart.com/mobile-recharge.php" class="cards style-2">
         <img src="./assets/images/icons/utils-mobile-icon.avif" alt="">
         <span>Mobile</span>
@@ -141,7 +141,7 @@ include 'components/header.php';
       <a href="#" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
-    <div class="grid grid-cols-3 gap-4 mt-4">
+    <div class="grid grid-cols-3 gap-3 mt-4">
       <a href="#" class="shopping-card">
         <div class="cashback-text">Upto 80% Off</div>
         <img class="translate-y-1" src="./assets/images/brands/amazon.png" alt="">

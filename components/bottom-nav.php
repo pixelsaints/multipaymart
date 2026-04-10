@@ -1,4 +1,4 @@
-<?php $current = $url ?? 'home'; ?>
+<?php $current = $url ?? ''; ?>
 
 <nav class="bottom-nav">
   <a href="<?php echo BASE_URL; ?>/index.php" class="nav-item <?php echo ($current === 'home') ? 'active' : ''; ?>">

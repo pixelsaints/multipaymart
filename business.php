@@ -7,7 +7,8 @@ $url = 'business';
 $topBar_style = [
   'page-header' => [
     'top-bar-title' => 'Business',
-    'show_back' => true,
+    'show_back' => false,
+    'show_home' => true,
     'show_notifications' => true,
     'show_coins' => true,
     'show_profile' => false
@@ -32,8 +33,7 @@ include 'components/header.php';
             <p class="user-info-name">Jacob Reed</p>
             <p class="user-info-contact">jacob.reed@gmail.com</p>
           </div>
-          <a href="#" class="user-info-id flex flex-col w-[35%]">
-            <!-- <span class="refer">Refer & Earn</span> -->
+          <a href="#" class="user-info-id flex flex-col w-[40%]">
             <span>MW9215939 <i class="fa-solid fa-copy"></i></span>
           </a>
         </div>
@@ -79,7 +79,7 @@ include 'components/header.php';
           <span class="text-md text-slate-600 mt-2 mb-0">Deposit</span>
           <span class="text-xl mt-2 font-semibold text-sec-400">₹ 2,500.00</span>
         </div>
-        <div class="btn-group flex flex-row justify-start items-center gap-3">
+        <div class="btn-group flex flex-row justify-start items-center gap-2">
           <a class="btn" href="#">Withdraw</a>
           <a class="btn" href="#">Deposit</a>
         </div>
@@ -90,7 +90,7 @@ include 'components/header.php';
           <span class="text-md text-slate-600 mt-2 mb-0">Current Cashback</span>
           <span class="text-xl mt-2 font-semibold text-sec-400">₹ 500.00</span>
         </div>
-        <div class="btn-group flex flex-row justify-start items-center gap-3">
+        <div class="btn-group flex flex-row justify-start items-center">
           <a class="btn" href="#">Withdraw</a>
         </div>
       </div>
@@ -117,7 +117,7 @@ include 'components/header.php';
     <div class="cashback-card">
       <div class="flex items-center p-4 border-b border-slate-300">
         <div class="flex items-center justify-center p-2 rounded-full bg-pri-100 border border-pri-200 w-[56px] h-[56px]">
-          <i class="fa-solid fa-coins text-[24px] text-pri-600"></i>
+          <i class="fa-solid fa-money-bills text-[24px] text-pri-600"></i>
         </div>
         <div class="flex flex-col ml-4">
           <div class="text-[14px] text-slate-500">Current Cashback Point</div>
@@ -127,7 +127,7 @@ include 'components/header.php';
 
       <div class="flex items-center p-4 border-b border-slate-300">
         <div class="flex items-center justify-center p-2 rounded-full bg-pri-100 border border-pri-200 w-[56px] h-[56px]">
-          <i class="fa-solid fa-coins text-[24px] text-pri-600"></i>
+          <i class="fa-solid fa-money-bills text-[24px] text-pri-600"></i>
         </div>
         <div class="flex flex-col ml-4">
           <div class="text-[14px] text-slate-500">Current Level Cashback</div>
@@ -137,7 +137,7 @@ include 'components/header.php';
 
       <div class="flex items-center p-4">
         <div class="flex items-center justify-center p-2 rounded-full bg-pri-100 border border-pri-200 w-[56px] h-[56px]">
-          <i class="fa-solid fa-coins text-[24px] text-pri-600"></i>
+          <i class="fa-solid fa-money-bills text-[24px] text-pri-600"></i>
         </div>
         <div class="flex flex-col ml-4">
           <div class="text-[14px] text-slate-500">Total Earned Cashback</div>

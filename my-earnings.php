@@ -7,7 +7,8 @@ $url = 'my-earnings';
 $topBar_style = [
   'page-header' => [
     'top-bar-title' => 'My Earnings',
-    'show_back' => true,
+    'show_back' => false,
+    'show_home' => true,
     'show_notifications' => true,
     'show_coins' => true,
     'show_profile' => false
@@ -32,7 +33,7 @@ include 'components/header.php';
       </div>
     </div>
     <div class="bal-card-button">
-      <div class="flex flex-row items-center justify-between w-full px-8">
+      <div class="flex flex-row items-center justify-between w-full px-2">
         <div class="text-center">
           <div class="text-[30px] flex items-center justify-center flex-row gap-2 font-medium">
             <img src="./assets/images/logo.png" alt="" class="w-[24px] h-[20px]">
@@ -52,31 +53,31 @@ include 'components/header.php';
 
 <section class="my-8">
   <div class="container">
-    <div class="grid grid-cols-2 gap-3 items-center justify-between">
-      <div class="flex bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
+    <div class="grid grid-cols-2 gap-3 items-stretch justify-between">
+      <div class="flex items-center bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
         <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-0">Cashback Points</span>
+          <span class="text-[14px] text-slate-600 mt-2 mb-1">Cashback Points Earned</span>
           <span class="text-[28px] mt-0 font-semibold text-sec-500">2,500</span>
         </div>
       </div>
 
-      <div class="flex bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
+      <div class="flex items-center bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
         <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-0">Level Cashback Points</span>
+          <span class="text-[14px] text-slate-600 mt-2 mb-1">Level Cashback Points Earned</span>
           <span class="text-[28px] mt-0 font-semibold text-sec-500">1500</span>
         </div>
       </div>
       
-      <div class="flex bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
+      <div class="flex items-center bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
         <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-0">Bonus Cash Points</span>
+          <span class="text-[14px] text-slate-600 mt-2 mb-1">Bonus Cash Points Earned</span>
           <span class="text-[28px] mt-0 font-semibold text-sec-500">500</span>
         </div>
       </div>
 
-      <div class="flex bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
+      <div class="flex items-center bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
         <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-0">Cashback From Vendors</span>
+          <span class="text-[14px] text-slate-600 mt-2 mb-1">Cashback From Vendors Earned</span>
           <span class="text-[28px] mt-0 font-semibold text-sec-500">500</span>
         </div>
       </div>

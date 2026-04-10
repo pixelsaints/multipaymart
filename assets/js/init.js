@@ -60,6 +60,22 @@ $(function () {
         },
       });
 
+      const voucher = new Swiper(".vouchers-slider .swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        grabCursor: true,
+        freeMode: true,
+
+        // NO autoplay
+        autoplay: false,
+
+        // NO pagination
+        pagination: false,
+
+        // Arrows
+        navigation: false
+      });
+
       //vaoucer
       // const voucherSwiper = new Swiper(".vouchers-slider .swiper", {
       //   loop: true,
