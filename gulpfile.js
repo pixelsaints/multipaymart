@@ -28,6 +28,7 @@ const paths = {
       "src/js/vendors/jquery.min.js",
       "src/js/vendors/swiper-bundle.min.js",
       "src/js/vendors/chart.js",
+      "src/js/vendors/gsap.min.js",
     ],
     init: "src/js/init.js",
     dest: "assets/js"

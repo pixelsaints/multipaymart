@@ -44,7 +44,7 @@ include 'components/header.php';
 <section class="mt-6 mb-0">
   <div class="container overflow-x-auto">
     <div class="cards style-1 h-scroll-container">
-      <a href="<?= BASE_URL; ?>/vouchers.php" class="card min-w-[132px] bg-gradient-to-b from-cyan-100 to-cyan-200">
+      <a href="<?= BASE_URL; ?>/vouchers/" class="card min-w-[132px] bg-gradient-to-b from-cyan-100 to-cyan-200">
         <img src="./assets/images/icons/gift-voucher-icon.avif" alt="" class="icon-3d">
         <span>Gift Vouchers</span>
       </a>
@@ -138,7 +138,7 @@ include 'components/header.php';
   <div class="container">
     <div class="flex flex-row items-center justify-between pt-3">
       <h3 class="font-medium">Popular Brands</h3>
-      <a href="#" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="<?= BASE_URL ?>/vouchers" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
     <div class="grid grid-cols-3 gap-3 mt-4">

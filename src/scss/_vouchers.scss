@@ -12,8 +12,6 @@
   gap: 6px;
   white-space: nowrap;
   color: $slate-600;
-  // min-width: 120px;
-  // width: 100%;
   text-transform: capitalize;
 
   &.active{
@@ -32,21 +30,29 @@
     position: relative;
 
     .badge{
-      border-radius: 6px;
-      right: 8px;
-      top: 8px;
+      border-radius: 0 0 0 6px;
+      inset: 0 0 auto auto;
     }
   }
 
   .brand-logo{
-    max-width: 140px;
-    padding-left: 12px;
+    height: auto;
+    padding: 8px 12px;
     background: $white;
     margin-top: -12px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     position: relative;
     z-index: 2;
     border-top-right-radius: 8px;
+    max-width: 120px;
+    width: fit-content;
+    box-shadow: 0px -6px 8px -4px rgba($slate-900, 0.5);
+
+    img{
+      max-width: 100px;
+      height: 18px;
+      width: auto;
+    }
   }
 
   .voucher-content{
@@ -67,5 +73,188 @@
     padding: 6px 12px;
     width: fit-content;
     border-radius: 16px;
+  }
+}
+
+.voucher{
+
+  &-thumb{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px -8px rgba($slate-900, 1);
+    
+    & > img{
+      width: 100%;
+      height: auto;
+    }
+
+    .badge {
+      border-radius: 0 0 0 6px;
+      inset: 0 0 auto auto;
+    }
+  }
+
+  &-details{
+    margin-top: -24px;
+    padding: 16px;
+    padding-top: 40px;
+    background: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: solid 1px $slate-300;
+    @include boxShadow($slate-500);
+
+    h2{
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    &-desc{
+      font-size: 13px;
+      line-height: 1.8;
+      color: $slate-600;
+    }
+  }
+}
+
+.drawer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  display: none;s
+
+  .drawer-overlay{
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.6);
+    opacity: 1;
+    z-index: 10;
+  }
+
+  .drawer-wrapper{
+    position: absolute;
+    z-index: 12;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 80vh;
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .drawer-close{
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 32px;
+    background: #fff;
+    border-top-left-radius: 4px;
+  }
+
+  .drawer-title{
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: solid 1px $slate-200;
+  }
+
+  .drawer-content{
+    overflow-y: auto;
+    flex: 1;
+    padding: 24px 24px 80px;
+    color: $slate-600;
+    height: 100%;
+
+    p{
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 16px;
+
+      li {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.radio-button{
+  label {
+
+    div {
+      background: $white;
+      border: solid 1px $slate-300;
+      white-space: nowrap;
+      padding: 8px 20px;
+      font-weight: 500;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 24px;
+    }
+
+    input:checked+div {
+      background: $slate-900;
+      border-color: $slate-900;
+      color: #fff;
+      font-weight: 400;
+    }
+  }
+}
+
+.voucher-buy{
+  position: sticky;
+  bottom: 0px;
+  border-radius: 16px 16px 0 0;
+  border-top: solid 1px $slate-300;
+  box-shadow: 0 -2px 5px -3px rgba($slate-900, 0.4);
+  background: #fff;
+  padding: 24px;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+
+  &-price{
+    font-size: 32px;
+  }
+
+  &-button, &-cart{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 32px;
+    font-weight: 500;
+  }
+
+  &-button{
+    background: $pri-600;
+    font-size: 18px;
+    color:#fff;
+  }
+
+  &-cart{
+    color: $slate-900;
+    background: #fff;
+    border: solid 1px $slate-300;
   }
 }
