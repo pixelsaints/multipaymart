@@ -207,7 +207,7 @@ include 'components/header.php';
 </section>
 
 <!-- Near By Partners -->
-<section class="my-10">
+<section class="my-10 pb-16">
   <div class="container overflow-x-auto">
     <div class="flex flex-row items-center justify-between">
       <h3 class="font-medium">Near By Partners</h3>

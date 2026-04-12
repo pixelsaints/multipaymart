@@ -106,7 +106,7 @@ $vouchers = [
   </div>
 </section>
 
-<section class="my-8">
+<section class="my-8 pb-20">
   <div class="container">
 
     <div class="h-scroll-container p-0">

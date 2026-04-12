@@ -100,7 +100,7 @@ include 'components/header.php';
 
 <section class="my-8">
   <div class="container">
-    <div class="kyc-card">
+    <div class="kyc-card rounded-lg">
       <div class="flex flex-row items-center justify-start">
         <img src="./assets/images/icons/verified.png" alt="">
         <div class="ml-4">
@@ -115,32 +115,32 @@ include 'components/header.php';
 <section class="my-8">
   <div class="container">
     <div class="cashback-card">
-      <div class="flex items-center p-4 border-b border-slate-300">
-        <div class="flex items-center justify-center p-2 rounded-full bg-pri-100 border border-pri-200 w-[56px] h-[56px]">
-          <i class="fa-solid fa-money-bills text-[24px] text-pri-600"></i>
+      <div class="flex items-center p-4 border-b border-slate-200">
+        <div class="icon flex items-center justify-center p-2 rounded-full w-[56px] h-[56px] bg-gradient-to-b from-pri-50 to-pri-100 border border-pri-200">
+          <i class="fa-solid fa-coins text-[24px] bg-gradient-to-b from-pri-500 to-pri-600 bg-clip-text text-transparent"></i>
         </div>
         <div class="flex flex-col ml-4">
-          <div class="text-[14px] text-slate-500">Current Cashback Point</div>
+          <div class="text-[14px] mb-1 text-slate-500">Current Cashback Point</div>
           <div class="leading-none mt-1 text-[24px] font-semibold text-slate-800">124.00</div>
         </div>
       </div>
 
-      <div class="flex items-center p-4 border-b border-slate-300">
-        <div class="flex items-center justify-center p-2 rounded-full bg-pri-100 border border-pri-200 w-[56px] h-[56px]">
-          <i class="fa-solid fa-money-bills text-[24px] text-pri-600"></i>
+      <div class="flex items-center p-4 border-b border-slate-200">
+        <div class="icon flex items-center justify-center p-2 rounded-full w-[56px] h-[56px] bg-gradient-to-b from-orange-50 to-orange-100 border border-orange-200">
+          <i class="fa-solid fa-square-poll-vertical text-[24px] bg-gradient-to-b from-orange-500 to-orange-600 bg-clip-text text-transparent"></i>
         </div>
         <div class="flex flex-col ml-4">
-          <div class="text-[14px] text-slate-500">Current Level Cashback</div>
+          <div class="text-[14px] mb-1 text-slate-500">Current Level Cashback</div>
           <div class="leading-none mt-1 text-[24px] font-semibold text-slate-800">124.00</div>
         </div>
       </div>
 
       <div class="flex items-center p-4">
-        <div class="flex items-center justify-center p-2 rounded-full bg-pri-100 border border-pri-200 w-[56px] h-[56px]">
-          <i class="fa-solid fa-money-bills text-[24px] text-pri-600"></i>
+        <div class="icon flex items-center justify-center p-2 rounded-full w-[56px] h-[56px] bg-gradient-to-b from-green-50 to-green-100 border border-green-200">
+          <i class="fa-solid fa-piggy-bank text-[24px] bg-gradient-to-b from-green-500 to-green-600 bg-clip-text text-transparent"></i>
         </div>
         <div class="flex flex-col ml-4">
-          <div class="text-[14px] text-slate-500">Total Earned Cashback</div>
+          <div class="text-[14px] mb-1 text-slate-500">Total Earned Cashback</div>
           <div class="leading-none mt-1 text-[24px] font-semibold text-slate-800">₹1500.00</div>
         </div>
       </div>
@@ -150,20 +150,20 @@ include 'components/header.php';
 
 <section class="my-8">
   <div class="container">
-    <div class="bonus-card">
-      <div class="flex flex-row items-center justify-between mb-6 border-b border-teal-400 pb-3">
-        <span class="text-[14px] font-semibold text-teal-800">Bonus Cashback</span>
-        <span class="text-[14px] font-semibold text-teal-800">30-day track</span>
+    <div class="bonus-card bg-white border border-slate-200 rounded-lg p-4">
+      <div class="flex flex-row items-center justify-between mb-6 border-b border-slate-200 pb-3">
+        <span class="text-[14px] font-semibold text-slate-800">Bonus Cashback</span>
+        <span class="text-[14px] font-semibold text-slate-800">30-day track</span>
       </div>
 
-      <span class="note text-[13px] opacity-[0.6]">Bands: Tier A ₹ 1,01,001 - ₹ 5,99,999 (+25%) · Tier B above ₹ 6,00,000 (+50%).</span>
+      <span class="note text-[13px] opacity-[0.8]">Bands: Tier A ₹ 1,01,001 - ₹ 5,99,999 (+25%) · Tier B above ₹ 6,00,000 (+50%).</span>
 
-      <h3 class="text-[32px] font-medium leading-none text-teal-800 mt-4 mb-1">₹ 100.00</h3>
-      <p class="mb-6 text-teal-800">Today’s min. deposit (tracked)</p>
+      <h3 class="text-[32px] font-medium leading-none text-green-600 mt-4 mb-1">₹ 100.00</h3>
+      <p class="mb-6 text-slate-800">Today’s min. deposit (tracked)</p>
 
-      <div class="flex flex-row items-center justify-between mt-4 border-t border-teal-400 pt-3">
-        <span class="text-[14px] font-semibold text-teal-800">Bonus received (lifetime)</span>
-        <span class="text-[14px] font-semibold text-teal-800">₹ 1500.00</span>
+      <div class="flex flex-row items-center justify-between mt-4 border-t border-slate-300 pt-3">
+        <span class="text-[14px] font-semibold text-green-600">Bonus received (lifetime)</span>
+        <span class="text-[14px] font-semibold text-green-600">₹ 1500.00</span>
       </div>
     </div>
   </div>
@@ -177,7 +177,7 @@ include 'components/header.php';
 
     <div class="cashback-card">
       <div class="flex items-center p-4 border-b border-slate-300">
-        <div class="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-green-100/30 to-green-200/80 border border-green-200 w-[56px] h-[56px]">
+        <div class="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-green-50 to-green-100 border border-green-200 w-[56px] h-[56px]">
           <i class="fa-solid fa-briefcase text-[24px] text-green-600"></i>
         </div>
         <div class="flex flex-col ml-4">
@@ -187,7 +187,7 @@ include 'components/header.php';
       </div>
 
       <div class="flex items-center p-4 border-b border-slate-300">
-        <div class="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-amber-100/30 to-amber-200/80 border border-amber-200 w-[56px] h-[56px]">
+        <div class="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-amber-50 to-amber-100 border border-amber-200 w-[56px] h-[56px]">
           <i class="fa-brands fa-web-awesome text-[24px] text-amber-500"></i>
         </div>
         <div class="flex flex-col ml-4">
@@ -197,7 +197,7 @@ include 'components/header.php';
       </div>
 
       <div class="flex items-center p-4">
-        <div class="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-orange-100/30 to-orange-200/80 border border-orange-200 w-[56px] h-[56px]">
+        <div class="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-orange-50 to-orange-100 border border-orange-200 w-[56px] h-[56px]">
           <i class="fa-solid fa-id-card-clip text-[24px] text-orange-600"></i>
         </div>
         <div class="flex flex-col ml-4">

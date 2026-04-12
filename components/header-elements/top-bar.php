@@ -41,6 +41,7 @@ if (is_array($topBar_style)) {
 		$show_notifications = $topBar_style['page-header']['show_notifications'] ?? true;
 		$show_coins = $topBar_style['page-header']['show_coins'] ?? false;
 		$show_profile = $topBar_style['page-header']['show_profile'] ?? false;
+		$show_cart = $topBar_style['page-header']['show_cart'] ?? false;
 
 		$current_style = 'page-header';
 	} else {
@@ -125,9 +126,15 @@ switch ($current_style) {
 					</a>
 				<?php endif; ?>
 
-				<?php if ($show_notifications): ?>
+				<?php if ($show_cart): ?>
 					<a href="#" class="my-account icon-link">
 						<i class="fa-solid fa-bell"></i>
+					</a>
+				<?php endif; ?>
+
+				<?php if ($show_notifications): ?>
+					<a href="#" class="cart-link icon-link">
+						<i class="fa-solid fa-cart-shopping relative top-[2px]"></i>
 					</a>
 				<?php endif; ?>
 			</div>

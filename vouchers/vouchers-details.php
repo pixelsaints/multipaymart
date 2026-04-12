@@ -19,7 +19,7 @@ include '../components/header.php'
 
 <section class="mt-6 mb-0 relative">
   <div class="container">
-    <div class="voucher-thumb">
+    <div class="voucher-thumb shadow-lg">
       <img src="../assets/images/vouchers/07_cleartrip-hotel.png" alt="">
        <span class="badge absolute bg-blue-600 text-white text-[12px] font-semibold px-2 py-1">
           400 mPay Points
