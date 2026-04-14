@@ -67,7 +67,7 @@ include 'components/header.php';
   </div>
 </div>
 
-<section class="mt-8">
+<section class="my-8">
   <div class="container">
     <!-- Header -->
     <div class="flex items-center justify-between mb-4">
@@ -159,6 +159,13 @@ include 'components/header.php';
 
     <div class="drawer-title">Top Up</div>
     <div class="drawer-content">
+
+      <label for="Email" class="flex flex-col gap-3 mb-6">
+        <span class="text-sm font-medium text-gray-700"> Enter the amount</span>
+
+        <input type="number" id="Email" class="pin-input w-full h-12 border border-slate-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-gray-900 appearance-none">
+      </label>
+
       <!-- Payment Methods -->
       <div class="bg-white border border-slate-200 rounded-lg px-4 mb-6 payment-methods">
 
@@ -237,6 +244,13 @@ include 'components/header.php';
           <i class="text-[16px] fa-solid fa-circle-check text-slate-200 peer-checked:text-pri-600 scale-125"></i>
         </label>
 
+      </div>
+
+      <!-- Actions -->
+      <div class="flex gap-3 mx-auto w-[100%]">
+        <button class="flex-1 bg-gray-900 text-white py-3 rounded-lg text-sm font-medium">
+          Add Funds
+        </button>
       </div>
     </div>
   </div>
@@ -343,33 +357,46 @@ include 'components/header.php';
     <div class="drawer-title">Card Limits</div>
 
     <div class="drawer-content">
-      <!-- Track -->
-      <div class="h-2 bg-gray-200 rounded-lg"></div>
-        <input id="range" type="range" min="0" max="100" value="40" class="w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-200">
+      <div class="text-[18px] mb-6">Manage your daily spend limits</div>
 
-        <p class="text-sm text-gray-600">Value: <span id="value">50</span></p>
+      <div class="space-y-6">
+        <!-- Online Spend -->
+        <div>
+          <div class="text-[16px] text-gray-600 mb-2">
+            Online Spend: <span class="value text-green-600 font-semibold">1000</span>
+          </div>
+          <input type="range" min="1000" max="50000" value="1000" class="range w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-200">
+        </div>
 
-        <script>
-          const range = document.getElementById('range');
-
-          function updateSlider() {
-            const val = (range.value - range.min) / (range.max - range.min) * 100;
-            range.style.background = `linear-gradient(to right, #111 ${val}%, #e5e7eb ${val}%)`;
-          }
-
-          range.addEventListener('input', updateSlider);
-
-          range.addEventListener('input', () => {
-            value.textContent = range.value;
-          });
-
-          updateSlider();
-        </script>
+        <!-- ATM Withdrawal -->
+        <div>
+          <div class="text-[16px] text-gray-600 mb-2">
+            ATM Withdrawal: <span class="value text-green-600 font-semibold">1000</span>
+          </div>
+          <input type="range" min="1000" max="20000" value="1000" class="range w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-200">
+        </div>
       </div>
     </div>
-
   </div>
 </div>
 
+<script>
+  const ranges = document.querySelectorAll('.range');
+
+  ranges.forEach(range => {
+    const valueEl = range.parentElement.querySelector('.value');
+
+    function updateSlider() {
+      const val = (range.value - range.min) / (range.max - range.min) * 100;
+      range.style.background = `linear-gradient(to right, #268aea ${val}%, #e5e7eb ${val}%)`;
+      // valueEl.textContent = range.value;
+      valueEl.textContent = `₹${Number(range.value).toLocaleString('en-IN')}`;
+    }
+
+    range.addEventListener('input', updateSlider);
+    
+    updateSlider();
+  });
+</script>
 
 <?php include 'components/footer.php'; ?>

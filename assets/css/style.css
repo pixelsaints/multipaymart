@@ -536,9 +536,6 @@ video {
     max-width: 1440px;
   }
 }
-.pointer-events-none {
-  pointer-events: none;
-}
 .visible {
   visibility: visible;
 }
@@ -565,9 +562,6 @@ video {
 }
 .top-\[60px\] {
   top: 60px;
-}
-.top-0 {
-  top: 0px;
 }
 .z-0 {
   z-index: 0;
@@ -749,6 +743,9 @@ video {
 .w-9 {
   width: 2.25rem;
 }
+.w-\[100\%\] {
+  width: 100%;
+}
 .w-\[22px\] {
   width: 22px;
 }
@@ -892,10 +889,10 @@ video {
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 .self-center {
   align-self: center;
@@ -2436,6 +2433,17 @@ a {
 a:focus, a:active {
   outline: none;
   box-shadow: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .btn {
