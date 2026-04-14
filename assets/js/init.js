@@ -157,6 +157,44 @@ $(function () {
           closeDrawer(activeDrawer);
         }
       });
+    },
+
+    stickyLinks: function(){
+      const sections = document.querySelectorAll('div[id]');
+      const navLinks = document.querySelectorAll('.sticky-links a');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.forEach(l => l.classList.remove('text-blue-600', 'font-semibold'));
+          link.classList.add('text-blue-600', 'font-semibold');
+        });
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              navLinks.forEach(link => {
+                link.classList.remove('text-blue-600', 'font-semibold');
+              });
+
+              const activeLink = document.querySelector(
+                `.sticky-links a[href="#${entry.target.id}"]`
+              );
+
+              if (activeLink) {
+                activeLink.classList.add('text-blue-600', 'font-semibold');
+              }
+            }
+          });
+        },
+        {
+          rootMargin: '-50% 0px -50% 0px', // triggers when section is mid screen
+          threshold: 0
+        }
+      );
+
+      sections.forEach(section => observer.observe(section));
     }
 
   };
@@ -166,5 +204,6 @@ $(function () {
     init.sideMenu();
     init.swiperSliders();
     init.drawer();
+    init.stickyLinks();
   });
 });

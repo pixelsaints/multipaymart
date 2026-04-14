@@ -43,45 +43,32 @@ include 'components/header.php';
           </div>
         </div>
       </div>
+      <img class="brand-logo" src="./assets/images/logo-white.png" alt="">
     </div>
 
     <div class="mpay-card-actions grid grid-cols-4 gap-2">
-      <div class="action-btn" onclick="openModal('topupModal')">
+      <button class="action-btn" data-target="topUp">
         <i class="fa-solid fa-plus-circle"></i>
         <span>Top Up</span>
-      </div>
-      <form method="POST" style="display: contents;">
-        <button type="submit" name="toggle_block" class="action-btn">
-          <i class="fa-solid fa-lock"></i>
-          <span>Block Card</span>
-        </button>
-      </form>
-      <div class="action-btn" onclick="openModal('pinModal')">
+      </button>
+      <button name="toggle_block" class="action-btn" data-target="block-card">
+        <i class="fa-solid fa-lock"></i>
+        <span>Block Card</span>
+      </button>
+      <button class="action-btn" data-target="set-pin">
         <i class="fa-solid fa-key"></i>
         <span>Set PIN</span>
-      </div>
-      <div class="action-btn" onclick="openModal('limitModal')">
+      </button>
+      <button class="action-btn" data-target="limit-increase">
         <i class="fa-solid fa-sliders-h"></i>
         <span>Limits</span>
-      </div>
+      </button>
     </div>
   </div>
 </div>
 
 <section class="mt-8">
   <div class="container">
-    <!-- <div class="max-w-md text-center empty-state py-12 px-8">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-auto size-20 text-pri-600">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"></path>
-      </svg>
-
-      <h2 class="mt-6 text-2xl font-bold text-slate-900">No data to display</h2>
-
-      <p class="mt-4 text-pretty text-slate-600">
-        No transactions yet. Your activity will appear here once you start using your mPay Card.
-      </p>
-    </div> -->
-
     <!-- Header -->
     <div class="flex items-center justify-between mb-4">
       <h2 class="text-lg font-medium text-slate-800">Recent Transactions</h2>
@@ -161,5 +148,228 @@ include 'components/header.php';
     </div>
   </div>
 </section>
+
+<div class="drawer" data-src="topUp">
+  <div class="drawer-overlay"></div>
+  <div class="drawer-wrapper">
+
+    <a href="#" class="drawer-close">
+      <i class="fa-solid fa-times"></i>
+    </a>
+
+    <div class="drawer-title">Top Up</div>
+    <div class="drawer-content">
+      <!-- Payment Methods -->
+      <div class="bg-white border border-slate-200 rounded-lg px-4 mb-6 payment-methods">
+
+        <!-- Wallet -->
+        <label class="flex items-center gap-3 py-4 cursor-pointer border-b border-slate-300">
+          <input type="radio" name="payment" value="wallet" class="hidden peer" checked>
+
+          <div class="w-10 h-10 flex items-center justify-center bg-gradient-to-b from-pri-50 to-pri-200 border border-pri-200 rounded-lg ">
+            <i class="fa-solid fa-wallet text-xl bg-gradient-to-b from-pri-400 to-pri-600 bg-clip-text text-transparent"></i>
+          </div>
+
+          <div class="flex-1">
+            <p class="text-[16px] font-medium text-slate-900">Wallet</p>
+            <p class="text-[14px] text-gray-500">Balance: <span class="text-green-600 font-semibold">₹1,250</span></p>
+          </div>
+          <i class="text-[16px] fa-solid fa-circle-check text-slate-200 peer-checked:text-pri-600 scale-125"></i>
+        </label>
+
+        <!-- UPI -->
+        <label class="flex items-center gap-3 py-4 cursor-pointer border-b border-slate-300">
+          <input type="radio" name="payment" value="upi" class="hidden peer">
+
+          <div class="w-10 h-10 flex items-center justify-center bg-gradient-to-b from-purple-50 to-purple-200 border border-purple-200 rounded-lg">
+            <img src="./assets/images/upi-icon.svg" alt="" class="w-[22px]">
+          </div>
+
+          <div class="flex-1">
+            <p class="text-[16px] font-medium text-slate-900">UPI</p>
+            <p class="text-[14px] text-gray-500">Pay using any UPI app</p>
+          </div>
+          <i class="text-[16px] fa-solid fa-circle-check text-slate-200 peer-checked:text-pri-600 scale-125"></i>
+        </label>
+
+        <!-- Debit Card -->
+        <label class="flex items-center gap-3 py-4 cursor-pointer border-b border-slate-300">
+          <input type="radio" name="payment" value="debit" class="hidden peer">
+
+          <div class="w-10 h-10 flex items-center justify-center bg-gradient-to-b from-green-50 to-green-200 border border-green-200  rounded-lg">
+            <i class="text-xl fa-solid fa-credit-card bg-gradient-to-b from-green-400 to-green-600 bg-clip-text text-transparent"></i>
+          </div>
+
+          <div class="flex-1">
+            <p class="text-[16px] font-medium text-slate-900">Debit Card</p>
+            <p class="text-[14px] text-gray-500">Visa, Mastercard, RuPay</p>
+          </div>
+          <i class="text-[16px] fa-solid fa-circle-check text-slate-200 peer-checked:text-pri-600 scale-125"></i>
+        </label>
+
+        <!-- Credit Card -->
+        <label class="flex items-center gap-3 py-4 cursor-pointer border-b border-slate-300">
+          <input type="radio" name="payment" value="credit" class="hidden peer">
+
+          <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-b from-yellow-100 to-yellow-200">
+            <i class="fa-solid fa-credit-card bg-gradient-to-b from-yellow-400 to-yellow-600 bg-clip-text text-transparent text-xl"></i>
+          </div>
+
+          <div class="flex-1">
+            <p class="text-[16px] font-medium text-slate-900">Credit Card</p>
+            <p class="text-[14px] text-gray-500">EMI options available</p>
+          </div>
+          <i class="text-[16px] fa-solid fa-circle-check text-slate-200 peer-checked:text-pri-600 scale-125"></i>
+        </label>
+
+        <!-- Net Banking -->
+        <label class="flex items-center gap-3 py-4 cursor-pointer">
+          <input type="radio" name="payment" value="netbanking" class="hidden peer">
+
+          <div class="w-10 h-10 flex items-center justify-center bg-gradient-to-b from-cyan-100 to-cyan-200 rounded-lg">
+            <i class="fa-solid fa-building-columns bg-gradient-to-b from-cyan-500 to-cyan-600 bg-clip-text text-transparent text-xl"></i>
+          </div>
+
+          <div class="flex-1">
+            <p class="text-[16px] font-medium text-slate-900">Net Banking</p>
+            <p class="text-[14px] text-gray-500">All major banks supported</p>
+          </div>
+          <i class="text-[16px] fa-solid fa-circle-check text-slate-200 peer-checked:text-pri-600 scale-125"></i>
+        </label>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="drawer" data-src="block-card">
+  <div class="drawer-overlay"></div>
+  <div class="drawer-wrapper">
+
+    <a href="#" class="drawer-close">
+      <i class="fa-solid fa-times"></i>
+    </a>
+
+    <div class="drawer-content">
+      <div class="text-center">
+        <div class="mt-6 mb-4 text-[20px] text-slate-800 font-medium">Block Your mPay Card?</div>
+        <p class="text-slate-500">Are you sure you want to block your mPay card ending in •••• 4821?. You can unblock your card anytime from the app.</p>
+
+         <!-- Info -->
+        <div class="bg-orange-50 p-3 rounded-lg text-sm text-gray-600 gap-3 mb-6">
+          <p class="mb-0">Transactions will be paused immediately.</p>
+          <p class="mb-0">Your money remains safe.</p>
+          <p class="mb-0">Unblock your card anytime.</p>
+        </div>
+
+        <!-- PIN Input -->
+        <div class="my-8">
+          <label class="text-sm font-medium text-slate-800 mb-2 block">
+            Enter MPIN
+          </label>
+
+          <div class="flex justify-between gap-2 w-[70%] mx-auto">
+            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-3 mb-8">
+          <button class="flex-1 border border-gray-300 py-2 rounded-lg text-sm font-medium">
+            Cancel
+          </button>
+          <button class="flex-1 bg-gray-900 text-white py-2 rounded-lg text-sm font-medium">
+            Block Card
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="drawer" data-src="set-pin">
+  <div class="drawer-overlay"></div>
+  <div class="drawer-wrapper">
+    <a href="#" class="drawer-close">
+      <i class="fa-solid fa-times"></i>
+    </a>
+
+    <div class="drawer-title">Set Pin</div>
+
+    <div class="drawer-content">
+      <!-- PIN Input -->
+      <div class="my-8 mx-auto w-[70%]">
+        <label class="text-sm font-medium text-slate-800 mb-2 block text-center">Enter MPIN</label>
+
+        <div class="flex justify-between gap-2 mx-auto mb-6">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+        </div>
+
+        <label class="text-sm font-medium text-slate-800 mb-2 block text-center">Confirm MPIN</label>
+
+        <div class="flex justify-between gap-2 mx-auto">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex gap-3 mx-auto w-[70%]">
+        <button class="flex-1 bg-gray-900 text-white py-3 rounded-lg text-sm font-medium">
+          Set Pin
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="drawer" data-src="limit-increase">
+  <div class="drawer-overlay"></div>
+  <div class="drawer-wrapper">
+
+    <a href="#" class="drawer-close">
+      <i class="fa-solid fa-times"></i>
+    </a>
+
+    <div class="drawer-title">Card Limits</div>
+
+    <div class="drawer-content">
+      <!-- Track -->
+      <div class="h-2 bg-gray-200 rounded-lg"></div>
+        <input id="range" type="range" min="0" max="100" value="40" class="w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-200">
+
+        <p class="text-sm text-gray-600">Value: <span id="value">50</span></p>
+
+        <script>
+          const range = document.getElementById('range');
+
+          function updateSlider() {
+            const val = (range.value - range.min) / (range.max - range.min) * 100;
+            range.style.background = `linear-gradient(to right, #111 ${val}%, #e5e7eb ${val}%)`;
+          }
+
+          range.addEventListener('input', updateSlider);
+
+          range.addEventListener('input', () => {
+            value.textContent = range.value;
+          });
+
+          updateSlider();
+        </script>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 <?php include 'components/footer.php'; ?>

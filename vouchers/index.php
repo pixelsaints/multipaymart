@@ -170,49 +170,7 @@ $vouchers = [
       <?php endforeach; ?>
     </div>
 
-    <nav class="flex items-center justify-center">
-      <ul class="inline-flex items-center -space-x-px text-sm">
-
-        <!-- Prev -->
-        <li>
-          <a href="#"
-            class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700">
-            Prev
-          </a>
-        </li>
-
-        <!-- Page Numbers -->
-        <li>
-          <a href="#"
-            class="px-3 py-2 text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
-            1
-          </a>
-        </li>
-
-        <li>
-          <a href="#"
-            class="px-3 py-2 text-white bg-blue-600 border border-blue-600">
-            2
-          </a>
-        </li>
-
-        <li>
-          <a href="#"
-            class="px-3 py-2 text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
-            3
-          </a>
-        </li>
-
-        <!-- Next -->
-        <li>
-          <a href="#"
-            class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700">
-            Next
-          </a>
-        </li>
-
-      </ul>
-    </nav>
+    <?php include '../components/pagination.php'; ?>
   </div>
 </section>
 

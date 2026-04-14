@@ -20,17 +20,17 @@ include 'components/header.php';
           </a>
         </div>
         <div class="swiper-slide">
-          <a href="https://multipaymart.com/card.php">
+          <a href="<?= BASE_URL?>/vouchers">
             <img src="./assets/images/banners/gift-card.avif" alt="">
           </a>
         </div>
         <div class="swiper-slide">
-          <a href="https://multipaymart.com/card.php">
+          <a href="<?= BASE_URL?>/partners">
             <img src="./assets/images/banners/partners-card.avif" alt="">
           </a>
         </div>
         <div class="swiper-slide">
-          <a href="https://multipaymart.com/card.php">
+          <a href="<?= BASE_URL?>/shopping">
             <img src="./assets/images/banners/shopping-card.avif" alt="">
           </a>
         </div>
@@ -48,11 +48,11 @@ include 'components/header.php';
         <img src="./assets/images/icons/gift-voucher-icon.avif" alt="" class="icon-3d">
         <span>Gift Vouchers</span>
       </a>
-      <a href="https://multipaymart.com/nearby.php" class="card min-w-[132px] bg-gradient-to-b from-orange-100 to-orange-200">
+      <a href="<?= BASE_URL?>/partners/" class="card min-w-[132px] bg-gradient-to-b from-orange-100 to-orange-200">
         <img src="./assets/images//icons/shops-front-view.avif" alt="" class="icon-3d">
         <span>Near by Partners</span>
       </a>
-      <a href="https://multipaymart.com/shopping.php" class="card min-w-[132px] bg-gradient-to-b from-blue-100 to-blue-200">
+      <a href="<?= BASE_URL; ?>/shopping/" class="card min-w-[132px] bg-gradient-to-b from-blue-100 to-blue-200">
         <img src="./assets/images/icons/online-store-icon.avif" alt="" class="icon-3d">
         <span>Shopping Sites</span>
       </a>
@@ -207,7 +207,7 @@ include 'components/header.php';
 </section>
 
 <!-- Near By Partners -->
-<section class="my-10 pb-16">
+<section class="mt-10">
   <div class="container overflow-x-auto">
     <div class="flex flex-row items-center justify-between">
       <h3 class="font-medium">Near By Partners</h3>

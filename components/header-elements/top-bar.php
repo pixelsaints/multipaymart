@@ -127,14 +127,14 @@ switch ($current_style) {
 				<?php endif; ?>
 
 				<?php if ($show_cart): ?>
-					<a href="#" class="my-account icon-link">
-						<i class="fa-solid fa-bell"></i>
+					<a href="#" class="icon-link">
+						<i class="fa-solid fa-cart-shopping relative top-[1px]"></i>
 					</a>
 				<?php endif; ?>
 
 				<?php if ($show_notifications): ?>
 					<a href="#" class="cart-link icon-link">
-						<i class="fa-solid fa-cart-shopping relative top-[2px]"></i>
+						<i class="fa-solid fa-bell relative top-[2px]"></i>
 					</a>
 				<?php endif; ?>
 			</div>

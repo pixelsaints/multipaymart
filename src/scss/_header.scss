@@ -41,6 +41,7 @@
 
   .left{
     gap: 12px;
+    width: 60%;
   }
 
   .right{
@@ -51,7 +52,8 @@
   .title{
     color: $pri-600;
     @include text-truncate;
-    max-width: 140px;
+    max-width: 180px;
+    width: 100%;
   }
 
   a.logo{
@@ -133,7 +135,7 @@
 }
 
 .location-bar{
-  padding: 16px 8px;
+  padding: 16px;
   cursor: pointer;
   display: flex;
   flex-direction: row;
