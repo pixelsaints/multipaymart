@@ -1,0 +1,13 @@
+@use './functions' as *;
+
+.shopping{
+
+  &-card{
+    min-height: 0;
+    background: linear-gradient( to bottom, $pri-50, $pri-100);
+    
+    img{
+      margin: 0;
+    }
+  }
+}
