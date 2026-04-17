@@ -523,12 +523,10 @@ body{
 }
 
 .report-links{
-  background: $sec-50;
   display: flex;
   flex-direction: column;
-  border: solid 1px $sec-200;
-  border-radius: 8px;
   overflow: hidden;
+  gap: 16px;
 
   a.report-link{
     display: flex;
@@ -536,37 +534,36 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 14px;
-    border-bottom: solid 1px $sec-200;
+    border: solid 1px $slate-200;
+    background: $white;
+    border-bottom: solid 1px $slate-200;
+    border-radius: 8px;
     transition: all 0.4s ease-in-out;
 
     &:hover{
-      background: $white;
-    }
-
-    &:last-child{
-      border-bottom: none;
+      background: $pri-100;
     }
 
     .report-content{
       max-width: 80%;
 
       .report-title{
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
         color: $slate-800;
+        margin-bottom: 2px;
       }
 
       .report-desc{
         font-size: 13px;
         color: $slate-500;
+        @include text-truncate;
       }
     }
-
+    
     i{
-      color: $sec-600;
+      color: $pri-600;
       font-size: 14px;
-      background: $white;
-      border: solid 1px $sec-200;
       width: 30px;
       height: 30px;
       display: flex;

@@ -17,64 +17,74 @@ include '../components/header.php';
 
 $offers = [
   [
-    "store" => "Amazon",
-    "desc" => "Up to 5% Cashback",
-    "badge" => "No Code Required",
+    "name" => "Up to 5% Cashback",
+    "image" => "../assets/images/vouchers/04_amazon-shopping-voucher.png",
+    "brand_logo" => "../assets/images/brands/amazon.png",
+    "discount" => "AMAZON05",
     "url" => "https://www.amazon.in"
   ],
   [
-    "store" => "Flipkart",
-    "desc" => "Flat ₹50 Off on ₹500",
-    "badge" => "WELCOME50",
+    "name" => "Flat 20% Off on 500",
+    "image" => "../assets/images/vouchers/06_flipkart_2.png",
+    "brand_logo" => "../assets/images/brands/flipkart-logo.svg",
+    "discount" => "WELCOME50",
     "url" => "https://www.flipkart.com"
   ],
   [
-    "store" => "Myntra",
-    "desc" => "10% Cashback on Fashion",
-    "badge" => "STYLE10",
+    "name" => "10% Cashback on Fashion",
+    "image" => "../assets/images/vouchers/07_myntra.png",
+    "brand_logo" => "../assets/images/brands/myntra_logo.png",
+    "discount" => "STYLE10",
     "url" => "https://www.myntra.com"
   ],
   [
-    "store" => "Ajio",
-    "desc" => "Earn 2X Coins",
-    "badge" => "AJIO2X",
+    "name" => "20% Cashback on Orders",
+    "image" => "../assets/images/vouchers/04_zomato.png",
+    "brand_logo" => "../assets/images/brands/zomato.png",
+    "discount" => "ZOMATO20",
+    "url" => "https://www.zomato.com"
+  ],
+  [
+    "name" => "Earn 2X Coins",
+    "image" => "../assets/images/vouchers/01_ajio.png",
+    "brand_logo" => "../assets/images/brands/ajio.png",
+    "discount" => "AJIO2X",
     "url" => "https://www.ajio.com"
   ],
   [
-    "store" => "Nykaa",
-    "desc" => "Flat 15% Off",
-    "badge" => "NYKAA15",
+    "name" => "Flat 15% Off",
+    "image" => "../assets/images/vouchers/07_nykaa.png",
+    "brand_logo" => "../assets/images/brands/nykaa.png",
+    "discount" => "NYKAA15",
     "url" => "https://www.nykaa.com"
   ],
   [
-    "store" => "Tata Cliq",
-    "desc" => "Up to 20% Off",
-    "badge" => "No Code Required",
+    "name" => "Up to 20% Off",
+    "image" => "../assets/images/vouchers/02_tatacliq.png",
+    "brand_logo" => "../assets/images/brands/tata-cliq.png",
+    "discount" => "TATCLI20",
     "url" => "https://www.tatacliq.com"
   ],
   [
-    "store" => "Croma",
-    "desc" => "₹1000 Cashback",
-    "badge" => "CROMA1000",
+    "name" => "₹1000 Cashback",
+    "image" => "../assets/images/vouchers/01_croma.png",
+    "brand_logo" => "../assets/images/brands/croma.png",
+    "discount" => "CROMA1000",
     "url" => "https://www.croma.com"
   ],
   [
-    "store" => "Reliance Digital",
-    "desc" => "Up to 10% Cashback",
-    "badge" => "No Code Required",
+    "name" => "Up to 10% Cashback",
+    "image" => "../assets/images/vouchers/myjiostore.png",
+    "brand_logo" => "../assets/images/brands/reliance_digital.svg",
+    "discount" => "RELDIG10",
     "url" => "https://www.reliancedigital.in"
   ],
   [
-    "store" => "Pepperfry",
-    "desc" => "Flat ₹500 Off",
-    "badge" => "HOME500",
-    "url" => "https://www.pepperfry.com"
-  ],
-  [
-    "store" => "Zomato",
-    "desc" => "20% Cashback on Orders",
-    "badge" => "ZOMATO20",
-    "url" => "https://www.zomato.com"
+    "name" => "Flat ₹500 Off",
+    "image" => "../assets/images/vouchers/21_pepperfry.png",
+    "brand_logo" => "../assets/images/brands/pf-logo.svg",
+    "discount" => "HOME500",
+    "url" => "https://www.croma.com"
   ]
 ];
 ?>
@@ -136,32 +146,19 @@ $offers = [
   <section class="my-8">
     <div class="container">
       <h3 class="font-medium mb-4">Coupons & Cashback</h3>
-      <div class="space-y-3">
+      <div class="gap-3 grid grid-cols-2">
         <?php foreach ($offers as $offer): ?>
-          
-          <div class="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm border">
-
-            <!-- Left Content -->
-            <div>
-              <p class="font-semibold text-[16px]"><?= $offer['store'] ?></p>
-              <p class="text-[14px] text-pri-500 mb-2"><?= $offer['desc'] ?></p>
-
-              <span class="inline-block mt-1 text-xs bg-sec-100 px-2 py-1 rounded">
-                <?= $offer['badge'] ?>
-              </span>
+          <a href="<?= htmlspecialchars($offer['url']) ?>" target="_blank" class="voucher-card block">
+            <div class="image-container relative flex items-center justify-center z-0 overflow-hidden">
+              <img src="<?= $offer['image']; ?>" alt="<?= htmlspecialchars($offer['name']); ?>">
             </div>
-
-            <!-- Right Button -->
-            <a 
-              href="track.php?url=<?= urlencode($offer['url']) ?>&store=<?= urlencode($offer['store']) ?>" 
-              target="_blank"
-              class="ml-4 bg-slate-800 text-white text-xs px-4 py-2 rounded-lg whitespace-nowrap"
-            >
-              Shop Now
-            </a>
-
-          </div>
-
+            <div class="brand-logo"><img src="<?= $offer['brand_logo']; ?>" alt=""></div>
+            <div class="voucher-content">
+              <p class="text-sm font-medium text-gray-800 line-clamp-2"><?= htmlspecialchars($offer['name']); ?></p>
+              <span class="flex flex-row gap-2 text-xs font-medium bg-sec-50 text-sec-400 mb-2"> <i class="fa-solid fa-copy"></i> <?= $offer['discount']; ?></span>
+              <!-- <div class="bg-slate-800 w-fit mt-4 px-3 py-2 text-[14px] rounded-2xl leading-none text-white">Shop Now</div> -->
+            </div>
+          </a>
         <?php endforeach; ?>
       </div>
     </div>

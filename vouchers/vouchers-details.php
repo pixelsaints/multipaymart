@@ -36,12 +36,10 @@ include '../components/header.php'
     <h3 class="voucher-type-title mt-10 mb-5 text-[18px] font-medium">Gift Card Amount</h3>
 
     <div class="radio-button flex flex-row flex-wrap gap-x-3 gap-y-3">
-
       <label>
         <input type="radio" name="denomination_type" value="self" class="hidden" checked>
         <div>₹ 500</div>
       </label>
-      
       <label>
         <input type="radio" name="denomination_type" value="self" class="hidden">
         <div>₹ 1000</div>

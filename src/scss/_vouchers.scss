@@ -41,7 +41,7 @@
     padding: 8px 12px;
     background: $white;
     margin-top: -12px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     position: relative;
     z-index: 2;
     border-top-right-radius: 8px;
@@ -69,11 +69,12 @@
   .text-xs{
     display: flex;
     font-size: 14px;
-    margin-top: 16px;
-    background: rgba($green-200, 0.8);
+    margin-top: 12px;
     padding: 6px 12px;
     width: fit-content;
     border-radius: 16px;
+    background: $sec-50;
+    color: $sec-400;
   }
 }
 

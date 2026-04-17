@@ -116,8 +116,6 @@ include '../components/header.php';
 
 <section class="my-8">
   <div class="container">
-
-
     <div class="grid grid-cols-2 gap-4 mb-8">
       <?php foreach ($partners as $partner): ?>
         
@@ -153,10 +151,8 @@ include '../components/header.php';
 
       <?php endforeach; ?>
     </div>
-
     <?php include '../components/pagination.php'; ?>
   </div>
-
 </section>
 
 <?php include '../components/footer.php'; ?>

@@ -56,7 +56,7 @@ include 'components/header.php';
         <img src="./assets/images/icons/online-store-icon.avif" alt="" class="icon-3d">
         <span>Shopping Sites</span>
       </a>
-      <a href="https://multipaymart.com/wallet.php" class="card min-w-[132px] bg-gradient-to-b from-green-100 to-green-200">
+      <a href="<?= BASE_URL; ?>/wallet/" class="card min-w-[132px] bg-gradient-to-b from-green-100 to-green-200">
         <img src="./assets/images/icons/wallet-icon.avif" alt="" class="icon-3d">
         <span>Wallet Balance</span>
       </a>

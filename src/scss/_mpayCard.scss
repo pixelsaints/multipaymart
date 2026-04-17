@@ -174,24 +174,21 @@
 }
 
 .mpay-card-transactions{
-  background: $white;
-  border-radius: 8px;
-  border: solid 1px $slate-200;
-  @include boxShadow($slate-500);
+  // background: $white;
+  // border-radius: 8px;
+  // border: solid 1px $slate-300;
   overflow: hidden;
 
   .transaction{
     position: relative;
     padding: 16px;
-    border-bottom: solid 1px $slate-200;
-
-    &:last-child{
-      border-bottom: none;
-    }
+    background: $white;
+    border-radius: 8px;
+    border: solid 1px $slate-200;
     
     .text-sm{
       font-size: 16px;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .text-xs{

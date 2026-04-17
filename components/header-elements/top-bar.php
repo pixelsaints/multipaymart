@@ -42,6 +42,7 @@ if (is_array($topBar_style)) {
 		$show_coins = $topBar_style['page-header']['show_coins'] ?? false;
 		$show_profile = $topBar_style['page-header']['show_profile'] ?? false;
 		$show_cart = $topBar_style['page-header']['show_cart'] ?? false;
+		$show_markRead = $topBar_style['page-header']['show_markRead'] ?? false;
 
 		$current_style = 'page-header';
 	} else {
@@ -75,11 +76,11 @@ switch ($current_style) {
 				</a>
 			</div>
 			<div class="right">
-				<a href="#" class="rewards icon-link">
+				<a href="my-earnings.php" class="rewards icon-link">
 					<i class="fa-solid fa-coins"></i>
 					<span>100</span>
 				</a>
-				<a href="#" class="my-account icon-link">
+				<a href="notifications.php" class="my-account icon-link">
 					<i class="fa-solid fa-bell"></i>
 				</a>
 				<a href="#" class="my-account icon-link">
@@ -114,27 +115,33 @@ switch ($current_style) {
 			
 			<div class="right">
 				<?php if($show_coins) : ?>
-					<a href="#" class="rewards icon-link">
+					<a href="<?=BASE_URL ?>/my-earnings.php" class="rewards icon-link">
 						<i class="fa-solid fa-coins"></i>
-						<span>100</span>
+						<span>160</span>
 					</a>
 				<?php endif; ?>
 
 				<?php if ($show_profile): ?>
-					<a href="#" class="my-account icon-link">
+					<a href="/profile.php" class="my-account icon-link">
 						<i class="fa-solid fa-user"></i>
 					</a>
 				<?php endif; ?>
 
 				<?php if ($show_cart): ?>
-					<a href="#" class="icon-link">
+					<a href="<?=BASE_URL ?>/cart" class="icon-link">
 						<i class="fa-solid fa-cart-shopping relative top-[1px]"></i>
 					</a>
 				<?php endif; ?>
 
 				<?php if ($show_notifications): ?>
-					<a href="#" class="cart-link icon-link">
-						<i class="fa-solid fa-bell relative top-[2px]"></i>
+					<a href="<?=BASE_URL ?>/notifications.php" class="cart-link icon-link">
+						<i class="fa-solid fa-bell relative top-[-1px]"></i>
+					</a>
+				<?php endif; ?>
+
+				<?php if ($show_markRead): ?>
+					<a href="<?=BASE_URL ?>/notifications.php" class="link text-sm text-pri-400">
+						Mark all as read
 					</a>
 				<?php endif; ?>
 			</div>

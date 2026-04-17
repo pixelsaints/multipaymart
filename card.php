@@ -75,7 +75,7 @@ include 'components/header.php';
       <button class="text-sm text-blue-600 hover:underline">View All</button>
     </div>
 
-    <div class="mpay-card-transactions">
+    <div class="mpay-card-transactions flex flex-col space-y-3">
       <!-- Top Up -->
       <div class="transaction flex items-center justify-between p-3">
         <div class="flex items-center gap-3">
