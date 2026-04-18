@@ -396,9 +396,10 @@
         </label>
 
         <div class="text mb-2">Select Your Account</div>
-        <div class="flex flex-col space-y-2 mb-6">
+        
+        <div class="flex flex-col mb-6 bg-white border border-slate-200 rounded-lg">
           <!-- UPI -->
-          <label class="flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer bg-white border border-slate-200 ">
+          <label class="flex items-center gap-3 px-4 py-4 rounded-lg cursor-pointer border-b border-slate-200">
             <input type="radio" name="withdra" value="upi" class="hidden peer">
             <div class="flex-1">
               <p class="mb-0 text-[16px] font-medium text-slate-900">ICICI Bank</p>
@@ -408,7 +409,7 @@
           </label>
 
           <!-- HDFC Bank -->
-          <label class="flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer bg-white border border-slate-200 ">
+          <label class="flex items-center gap-3 px-4 py-4 rounded-lg cursor-pointer border-b border-slate-200">
             <input type="radio" name="withdra" value="hdfc" class="hidden peer">
             <div class="flex-1">
               <p class="mb-0 text-[16px] font-medium text-slate-900">HDFC Bank</p>
@@ -419,7 +420,7 @@
           </label>
 
           <!-- SBI Bank -->
-          <label class="flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer bg-white border border-slate-200 ">
+          <label class="flex items-center gap-3 px-4 py-4 rounded-lg cursor-pointer border-b border-slate-200">
             <input type="radio" name="withdra" value="sbi" class="hidden peer">
             <div class="flex-1">
               <p class="mb-0 text-[16px] font-medium text-slate-900">State Bank of India</p>
@@ -430,7 +431,7 @@
           </label>
 
           <!-- Axis Bank -->
-          <label class="flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer bg-white border border-slate-200 ">
+          <label class="flex items-center gap-3 px-4 py-4 rounded-lg cursor-pointer">
             <input type="radio" name="withdra" value="axis" class="hidden peer">
             <div class="flex-1">
               <p class="mb-0 text-[16px] font-medium text-slate-900">Axis Bank</p>
@@ -440,6 +441,7 @@
             <i class="text-[16px] fa-solid fa-circle-check text-slate-200 peer-checked:text-pri-600 scale-125"></i>
           </label>
         </div>
+        
 
         <!-- Actions -->
         <div class="flex gap-3 mx-auto w-[100%]">
@@ -512,7 +514,7 @@
       Deposit Gold
     </div>
     <div class="drawer-content">
-      <div class="p-5 bg-blue-100 text-[14px] rounded-lg">
+      <div class="p-5 bg-sec-100 text-[14px] rounded-lg">
         Upload your gold bill and enter the bill number. Admin will verify and credit your Gold Wallet based on the bill.
       </div>
       <div class="my-6">
@@ -542,7 +544,7 @@
         <!-- Actions -->
         <div class="flex gap-3 mx-auto w-[100%] mt-8">
           <button class="flex-1 bg-gray-900 text-white py-3 rounded-lg text-sm font-medium">
-            Send Money
+            Submit Request
           </button>
         </div>
       </div>

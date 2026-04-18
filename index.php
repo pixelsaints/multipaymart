@@ -69,42 +69,42 @@ include 'components/header.php';
   <div class="container">
     <div class="flex flex-row items-center justify-between">
       <h3 class="font-medium">Utilities & Pay Bills</h3>
-      <a href="<?php echo BASE_URL?>/recharge.php" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="<?= BASE_URL ?>/recharge/" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <div class="grid grid-cols-3 gap-3 mt-6">
-      <a href="https://multipaymart.com/mobile-recharge.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/mobile-recharge.php" class="cards style-2">
         <img src="./assets/images/icons/utils-mobile-icon.avif" alt="">
         <span>Mobile</span>
       </a>
-      <a href="https://multipaymart.com/credit-card.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/credit-card.php" class="cards style-2">
         <img src="./assets/images/icons/utils-credit-card-icon.avif" alt="">
         <span>Credit Card</span>
       </a>
-      <a href="https://multipaymart.com/dth.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/dth.php" class="cards style-2">
         <img class="scale-x-[-1]" src="./assets/images/icons/utils-dth-icon.avif" alt="">
         <span>DTH</span>
       </a>
-      <a href="https://multipaymart.com/landline.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/landline.php" class="cards style-2">
         <img src="./assets/images/icons/utils-landline-icon.avif" alt="">
         <span>Landline</span>
       </a>
-      <a href="https://multipaymart.com/fastag.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/fastag.php" class="cards style-2">
         <img src="./assets/images/icons/utils-toll-icon.avif" alt="">
         <span>FastTag</span>
       </a>
-      <a href="https://multipaymart.com/recharge.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/recharge.php" class="cards style-2">
         <img src="./assets/images/icons/utils-broadband-icon.avif" alt="">
         <span>Broadband</span>
       </a>
-      <a href="https://multipaymart.com/electricity-bill.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/electricity-bill.php" class="cards style-2">
         <img src="./assets/images/icons/utils-elec-icon.avif" alt="">
         <span>Electricity</span>
       </a>
-      <a href="https://multipaymart.com/lpg-gas.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/lpg-gas.php" class="cards style-2">
         <img src="./assets/images/icons/utils-gas-icon.avif" alt="">
         <span>LPG Gas</span>
       </a>
-      <a href="https://multipaymart.com/water-bill.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/water-bill.php" class="cards style-2">
         <img src="./assets/images/icons/utils-water-icon.avif" alt="">
         <span>Water Bill</span>
       </a>
@@ -117,7 +117,7 @@ include 'components/header.php';
   <div class="container">
     <div class="flex flex-row items-center justify-between">
       <h3 class="font-medium">Exciting Offers</h3>
-      <a href="#" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="<?= BASE_URL ?>/shopping/" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <div class="offer-cards mt-5">
       <a class="card">
