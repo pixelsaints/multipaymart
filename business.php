@@ -105,7 +105,9 @@ include 'components/header.php';
         <img src="./assets/images/icons/verified.png" alt="">
         <div class="ml-4">
           <h3 class="mb-2">KYC Verification</h3>
-          <span class="flex items-center justify-center py-[3px] pl-2 pr-3 w-fit bg-emerald-100/80 text-emerald-600 border border-emerald-300 rounded-md"><i class="fa-solid fa-circle-check mr-2"></i> Completed</span>
+          <span class="flex items-center justify-center py-[3px] pl-2 pr-3 w-fit bg-emerald-100/80 text-emerald-600 border border-emerald-300 rounded-md">
+            <i class="fa-solid fa-circle-check mr-2"></i> Completed
+          </span>
         </div>
       </div>
     </div>
@@ -117,7 +119,7 @@ include 'components/header.php';
     <div class="cashback-card">
       <div class="flex items-center p-4 border-b border-slate-200">
         <div class="icon flex items-center justify-center p-2 rounded-full w-[56px] h-[56px] bg-gradient-to-b from-pri-50 to-pri-100 border border-pri-200">
-          <i class="fa-solid fa-coins text-[24px] bg-gradient-to-b from-pri-500 to-pri-600 bg-clip-text text-transparent"></i>
+          <i class="fa-solid fa-coins text-[20px] bg-gradient-to-b from-pri-500 to-pri-600 bg-clip-text text-transparent"></i>
         </div>
         <div class="flex flex-col ml-4">
           <div class="text-[14px] mb-1 text-slate-500">Current Cashback Point</div>
@@ -127,7 +129,7 @@ include 'components/header.php';
 
       <div class="flex items-center p-4 border-b border-slate-200">
         <div class="icon flex items-center justify-center p-2 rounded-full w-[56px] h-[56px] bg-gradient-to-b from-orange-50 to-orange-100 border border-orange-200">
-          <i class="fa-solid fa-square-poll-vertical text-[24px] bg-gradient-to-b from-orange-500 to-orange-600 bg-clip-text text-transparent"></i>
+          <i class="fa-solid fa-square-poll-vertical text-[20px] bg-gradient-to-b from-orange-500 to-orange-600 bg-clip-text text-transparent"></i>
         </div>
         <div class="flex flex-col ml-4">
           <div class="text-[14px] mb-1 text-slate-500">Current Level Cashback</div>
@@ -137,7 +139,7 @@ include 'components/header.php';
 
       <div class="flex items-center p-4">
         <div class="icon flex items-center justify-center p-2 rounded-full w-[56px] h-[56px] bg-gradient-to-b from-green-50 to-green-100 border border-green-200">
-          <i class="fa-solid fa-piggy-bank text-[24px] bg-gradient-to-b from-green-500 to-green-600 bg-clip-text text-transparent"></i>
+          <i class="fa-solid fa-piggy-bank text-[20px] bg-gradient-to-b from-green-500 to-green-600 bg-clip-text text-transparent"></i>
         </div>
         <div class="flex flex-col ml-4">
           <div class="text-[14px] mb-1 text-slate-500">Total Earned Cashback</div>
@@ -182,27 +184,27 @@ include 'components/header.php';
         </div>
         <div class="flex flex-col ml-4">
           <div class="text-[14px] text-slate-500">Direct Business</div>
-          <div class="leading-none mt-1 text-[24px] font-semibold text-slate-800">₹ 124.00</div>
+          <div class="leading-none mt-1 text-[24px] font-medium text-slate-700">₹ 124.00</div>
         </div>
       </div>
 
       <div class="flex items-center p-4 border-b border-slate-300">
         <div class="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-amber-50 to-amber-100 border border-amber-200 w-[56px] h-[56px]">
-          <i class="fa-brands fa-web-awesome text-[24px] text-amber-500"></i>
+          <i class="fa-brands fa-web-awesome text-[20px] text-amber-500"></i>
         </div>
         <div class="flex flex-col ml-4">
           <div class="text-[14px] text-slate-500">Sponsor Business</div>
-          <div class="leading-none mt-1 text-[24px] font-semibold text-slate-800">₹ 124.00</div>
+          <div class="leading-none mt-1 text-[24px] font-medium text-slate-700">₹ 124.00</div>
         </div>
       </div>
 
       <div class="flex items-center p-4">
         <div class="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-orange-50 to-orange-100 border border-orange-200 w-[56px] h-[56px]">
-          <i class="fa-solid fa-id-card-clip text-[24px] text-orange-600"></i>
+          <i class="fa-solid fa-id-card-clip text-[20px] text-orange-600"></i>
         </div>
         <div class="flex flex-col ml-4">
           <div class="text-[14px] text-slate-500">Self Business</div>
-          <div class="leading-none mt-1 text-[24px] font-semibold text-slate-800">
+          <div class="leading-none mt-1 text-[24px] font-medium text-slate-700">
             ₹ 1500.00
           </div>
         </div>

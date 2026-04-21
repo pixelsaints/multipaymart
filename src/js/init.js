@@ -195,6 +195,80 @@ $(function () {
       );
 
       sections.forEach(section => observer.observe(section));
+    },
+
+    stepForm: function () {
+      const wrapper = document.querySelector('[data-kyc-form]');
+      if (!wrapper) return;
+
+      let currentStep = 1;
+
+      const steps = wrapper.querySelectorAll('.step');
+      const indicators = wrapper.querySelectorAll('[data-step]');
+
+      function updateSteps(step) {
+        // Show correct step
+        steps.forEach(s => {
+          s.classList.toggle('hidden', parseInt(s.dataset.step) !== step);
+        });
+
+        // Update indicators
+        indicators.forEach(ind => {
+          const indStep = parseInt(ind.dataset.step);
+          const circle = ind.querySelector('div');
+
+          // reset
+          ind.classList.remove('text-blue-600', 'text-gray-400');
+
+          if (indStep <= step) {
+            ind.classList.add('text-blue-600');
+
+            if (circle) {
+              circle.classList.remove('bg-gray-300');
+              circle.classList.add('bg-blue-600');
+              circle.innerHTML = indStep < step ? '✓' : indStep;
+            }
+          } else {
+            ind.classList.add('text-gray-400');
+
+            if (circle) {
+              circle.classList.remove('bg-blue-600');
+              circle.classList.add('bg-gray-300');
+              circle.innerHTML = indStep;
+            }
+          }
+        });
+
+        currentStep = step;
+
+        // optional scroll reset
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      /* ----------------------------------
+         EVENT DELEGATION (IMPORTANT FIX)
+      ---------------------------------- */
+
+      wrapper.addEventListener('click', function (e) {
+        const nextBtn = e.target.closest('.nextBtn');
+        const prevBtn = e.target.closest('.prevBtn');
+
+        if (nextBtn) {
+          e.preventDefault();
+          if (currentStep < steps.length) {
+            updateSteps(currentStep + 1);
+          }
+        }
+
+        if (prevBtn) {
+          e.preventDefault();
+          if (currentStep > 1) {
+            updateSteps(currentStep - 1);
+          }
+        }
+      });
+
+      updateSteps(1);
     }
 
   };
@@ -205,5 +279,6 @@ $(function () {
     init.swiperSliders();
     init.drawer();
     init.stickyLinks();
+    // init.stepForm();
   });
 });

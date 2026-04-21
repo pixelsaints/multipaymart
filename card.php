@@ -160,10 +160,10 @@ include 'components/header.php';
     <div class="drawer-title">Top Up</div>
     <div class="drawer-content">
 
-      <label for="Email" class="flex flex-col gap-3 mb-6">
+      <label class="flex flex-col gap-3 mb-6">
         <span class="text-sm font-medium text-gray-700"> Enter the amount</span>
 
-        <input type="number" id="Email" class="pin-input w-full h-12 border border-slate-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-gray-900 appearance-none">
+        <input id="text" type="text"  autocomplete="off" class="bg-white p-3 text-slate-800 placeholeder-slate-400 border border-slate-300 focus:border-slate-400 rounded focus:placeholder-white transition">
       </label>
 
       <!-- Payment Methods -->
@@ -248,7 +248,7 @@ include 'components/header.php';
 
       <!-- Actions -->
       <div class="flex gap-3 mx-auto w-[100%]">
-        <button class="flex-1 bg-gray-900 text-white py-3 rounded-lg text-sm font-medium">
+        <button class="flex-1 bg-gray-900 text-white py-4 rounded-lg text-sm font-medium">
           Add Funds
         </button>
       </div>
@@ -284,10 +284,10 @@ include 'components/header.php';
           </label>
 
           <div class="flex justify-between gap-2 w-[70%] mx-auto">
-            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
-            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
-            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
-            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg">
+            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:bg-white active:bg-white">
+            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:bg-white active:bg-white">
+            <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:bg-white active:bg-white">
           </div>
         </div>
 
@@ -296,7 +296,7 @@ include 'components/header.php';
           <button class="flex-1 border border-gray-300 py-2 rounded-lg text-sm font-medium">
             Cancel
           </button>
-          <button class="flex-1 bg-gray-900 text-white py-2 rounded-lg text-sm font-medium">
+          <button class="flex-1 bg-gray-900 text-white py-4 rounded-lg text-sm font-medium">
             Block Card
           </button>
         </div>
@@ -316,29 +316,29 @@ include 'components/header.php';
 
     <div class="drawer-content">
       <!-- PIN Input -->
-      <div class="my-8 mx-auto w-[70%]">
-        <label class="text-sm font-medium text-slate-800 mb-2 block text-center">Enter MPIN</label>
+      <div class="my-8 mx-auto w-[80%]">
+        <label class="text-sm font-medium text-slate-800 mb-4 block text-center">Enter MPIN</label>
 
         <div class="flex justify-between gap-2 mx-auto mb-6">
-          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
-          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
-          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
-          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg">
         </div>
 
-        <label class="text-sm font-medium text-slate-800 mb-2 block text-center">Confirm MPIN</label>
+        <label class="text-sm font-medium text-slate-800 mb-4 block text-center">Confirm MPIN</label>
 
         <div class="flex justify-between gap-2 mx-auto">
-          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
-          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
-          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
-          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg focus:outline-none focus:ring-2 focus:ring-gray-900">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg">
+          <input type="password" maxlength="1" class="pin-input w-12 h-12 border border-slate-300 rounded-lg text-center text-lg">
         </div>
       </div>
 
       <!-- Actions -->
-      <div class="flex gap-3 mx-auto w-[70%]">
-        <button class="flex-1 bg-gray-900 text-white py-3 rounded-lg text-sm font-medium">
+      <div class="flex gap-3 mx-auto w-[80%]">
+        <button class="flex-1 bg-gray-900 text-white py-4 rounded-lg text-sm font-medium">
           Set Pin
         </button>
       </div>
@@ -376,6 +376,13 @@ include 'components/header.php';
           <input type="range" min="1000" max="20000" value="1000" class="range w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-200">
         </div>
       </div>
+
+      <!-- Actions -->
+        <div class="flex gap-3 mt-12">
+          <button class="flex-1 bg-gray-900 text-white py-4 rounded-lg text-sm font-medium">
+            Update Limits
+          </button>
+        </div>
     </div>
   </div>
 </div>

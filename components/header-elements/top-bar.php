@@ -83,7 +83,7 @@ switch ($current_style) {
 				<a href="notifications.php" class="my-account icon-link">
 					<i class="fa-solid fa-bell"></i>
 				</a>
-				<a href="#" class="my-account icon-link">
+				<a href="<?= BASE_URL ?>/profile/" class="my-account icon-link">
 					<i class="fa-solid fa-user"></i>
 				</a>
 			</div>
@@ -122,7 +122,7 @@ switch ($current_style) {
 				<?php endif; ?>
 
 				<?php if ($show_profile): ?>
-					<a href="/profile.php" class="my-account icon-link">
+					<a href="<?= BASE_URL ?>/profile" class="my-account icon-link">
 						<i class="fa-solid fa-user"></i>
 					</a>
 				<?php endif; ?>

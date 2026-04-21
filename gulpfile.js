@@ -15,7 +15,7 @@ const del = (...args) => import("del").then((mod) => mod.deleteAsync(...args));
    PATHS
 --------------------------------------------------- */
 
-const proxyUrl = "http://multipaymart.local/";
+const proxyUrl = "http://multipaymart.local";
 
 const paths = {
   styles: {
@@ -100,9 +100,9 @@ function initScript() {
 function serve() {
   browserSync.init({
     proxy: proxyUrl,
-    // open: false,
-    // notify: false,
-    // ghostMode: false
+    open: false,
+    notify: false,
+    ghostMode: false
   });
 
   // Watch SCSS files
