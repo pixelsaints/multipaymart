@@ -1,6 +1,7 @@
 <?php 
 include 'config.php';
 
+
 $title = "MultiPay Mart - Home";
 $show_back = false;
 $show_location = true;
@@ -72,39 +73,39 @@ include 'components/header.php';
       <a href="<?= BASE_URL ?>/recharge/" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <div class="grid grid-cols-3 gap-3 mt-6">
-      <a href="<?= BASE_URL ?>/recharge/mobile-recharge.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/recharge-type.php" class="cards style-2">
         <img src="./assets/images/icons/utils-mobile-icon.avif" alt="">
         <span>Mobile</span>
       </a>
-      <a href="<?= BASE_URL ?>/recharge/credit-card.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/recharge-type.php" class="cards style-2">
         <img src="./assets/images/icons/utils-credit-card-icon.avif" alt="">
         <span>Credit Card</span>
       </a>
-      <a href="<?= BASE_URL ?>/recharge/dth.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/recharge-type.php" class="cards style-2">
         <img class="scale-x-[-1]" src="./assets/images/icons/utils-dth-icon.avif" alt="">
         <span>DTH</span>
       </a>
-      <a href="<?= BASE_URL ?>/recharge/landline.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/recharge-type.php" class="cards style-2">
         <img src="./assets/images/icons/utils-landline-icon.avif" alt="">
         <span>Landline</span>
       </a>
-      <a href="<?= BASE_URL ?>/recharge/fastag.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/recharge-type.php" class="cards style-2">
         <img src="./assets/images/icons/utils-toll-icon.avif" alt="">
         <span>FastTag</span>
       </a>
-      <a href="<?= BASE_URL ?>/recharge/recharge.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/recharge-type.php" class="cards style-2">
         <img src="./assets/images/icons/utils-broadband-icon.avif" alt="">
         <span>Broadband</span>
       </a>
-      <a href="<?= BASE_URL ?>/recharge/electricity-bill.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/recharge-type.php" class="cards style-2">
         <img src="./assets/images/icons/utils-elec-icon.avif" alt="">
         <span>Electricity</span>
       </a>
-      <a href="<?= BASE_URL ?>/recharge/lpg-gas.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/recharge-type.php" class="cards style-2">
         <img src="./assets/images/icons/utils-gas-icon.avif" alt="">
         <span>LPG Gas</span>
       </a>
-      <a href="<?= BASE_URL ?>/recharge/water-bill.php" class="cards style-2">
+      <a href="<?= BASE_URL ?>/recharge/recharge-type.php" class="cards style-2">
         <img src="./assets/images/icons/utils-water-icon.avif" alt="">
         <span>Water Bill</span>
       </a>
@@ -137,70 +138,58 @@ include 'components/header.php';
 <section class="my-8">
   <div class="container">
     <div class="flex flex-row items-center justify-between pt-3">
-      <h3 class="font-medium">Popular Brands</h3>
+      <h3 class="font-medium">Shopping sites</h3>
       <a href="<?= BASE_URL ?>/vouchers" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
     <div class="grid grid-cols-3 gap-3 mt-4">
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/amazon.png" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="translate-y-1" src="./assets/images/brands/amazon.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/flipkart-logo.svg" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="h-[40px] w-auto" src="./assets/images/brands/flipkart.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/myntra-logo.svg" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="h-[60px] w-auto" src="./assets/images/brands/myntra.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/nykaa.png" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="" src="./assets/images/brands/nykaa.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/pantaloons.png" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="scale-[1.1]" src="./assets/images/brands/pantaloons.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/unilever.png" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="h-[56px] w-auto" src="./assets/images/brands/unilever.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/dominos.png" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="h-[56px] w-auto" src="./assets/images/brands/dominos.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/swiggy.png" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="" src="./assets/images/brands/swiggy.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/zomato.png" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="" src="./assets/images/brands/zomato.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/ola.png" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="h-[30px] w-auto" src="./assets/images/brands/ola.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/uber.png" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="" src="./assets/images/brands/uber.png" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
-      <a href="#" class="shopping-card">
+      <a href="#" class="shopping-site">
+        <img class="mt-2 mb-10 max-w-[80px] max-h-[40px]" src="./assets/images/brands/rapido.svg" alt="">
         <div class="cashback-text">Upto 80% Off</div>
-        <img class="" src="./assets/images/brands/rapido.svg" alt="">
-        <div href="#" class="btn-rewards">3.50% Rewards</div>
       </a>
     </div>
   </div>

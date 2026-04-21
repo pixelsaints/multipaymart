@@ -25,6 +25,12 @@ a {
   }
 }
 
+input {
+
+  &:focus {
+    outline: none;
+  }
+}
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -34,5 +40,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type="number"] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }

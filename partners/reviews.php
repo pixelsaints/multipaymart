@@ -65,10 +65,10 @@ $reviews = [
 
 <?php 
   foreach ($reviews as $review): 
-  $isLast = $index === array_key_last($reviews);
+  // $isLast = $index === array_key_last($reviews);
 ?>
-  <div class="flex flex-col border-b p-4 <?= $isLast ? 'border-b-0 mb-0 pb-0' : 'border-slate-200' ?> ">
-    <div class="flex flex-row items-start justify-between">
+  <div class="flex flex-col border-b p-4 ">
+    <div class="flex flex-row items-center justify-between">
       <div class="flex-col">
         <div class="text-[17px] font-medium">
           <?= $review['user_name'] ?>
@@ -80,7 +80,7 @@ $reviews = [
 
       <div class="flex flex-row items-center justify-center gap-1 px-[8px] py-[4px] text-[13px] bg-green-600 text-white rounded leading-none font-semibold">
         <i class="fa-solid fa-star text-[12px]"></i>
-        <span class="flex leading-none relative top-[1px]">
+        <span class="flex leading-none relative p-1 top-[1px]">
           <?= $review['rating'] ?>
         </span>
       </div>

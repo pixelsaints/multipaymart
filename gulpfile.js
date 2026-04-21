@@ -15,7 +15,7 @@ const del = (...args) => import("del").then((mod) => mod.deleteAsync(...args));
    PATHS
 --------------------------------------------------- */
 
-const proxyUrl = "http://localhost/multipaymart/";
+const proxyUrl = "http://multipaymart.local/";
 
 const paths = {
   styles: {

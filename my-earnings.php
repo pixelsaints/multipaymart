@@ -33,13 +33,13 @@ include 'components/header.php';
       </div>
     </div>
     <div class="bal-card-button">
-      <div class="flex flex-row items-center justify-between w-full px-2">
+      <div class="flex flex-row items-center justify-around w-full px-2">
         <div class="text-center">
           <div class="text-[30px] flex items-center justify-center flex-row gap-2 font-medium">
             <img src="./assets/images/logo.png" alt="" class="w-[24px] h-[20px]">
             <span class="text-pri-600">140</span>
           </div>
-          <div class="text-[16px] text-slate-500">Total MPay Points</div>
+          <div class="text-[16px] text-slate-500">MPay Points</div>
         </div>
 
         <div class="text-center">
@@ -53,33 +53,25 @@ include 'components/header.php';
 
 <section class="my-8">
   <div class="container">
-    <div class="grid grid-cols-2 gap-3 items-stretch justify-between">
-      <div class="flex items-center bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
-        <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-1">Cashback Points Earned</span>
-          <span class="text-[28px] mt-0 font-semibold text-sec-500">2,500</span>
-        </div>
+    <div class="grid grid-cols-2 gap-4 items-stretch justify-between">
+      <div class="flex flex-col justify-center items-center bg-white border border-slate-200 rounded p-4">
+          <span class="text-[12px] text-slate-500 mt-2 mb-3">Cashback Points</span>
+          <span class="flex flex-row items-center gap-2 text-[24px] mb-2 font-semibold text-green-600"><i class="fa-solid fa-coins"></i> 2,500</span>
       </div>
 
-      <div class="flex items-center bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
-        <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-1">Level Cashback Points Earned</span>
-          <span class="text-[28px] mt-0 font-semibold text-sec-500">1500</span>
-        </div>
+      <div class="flex flex-col justify-center items-center bg-white border border-slate-200 rounded p-4">
+          <span class="text-[12px] text-slate-500 mt-2 mb-3">Level Cashback Points</span>
+          <span class="flex flex-row items-center gap-2 text-[24px] mb-2 font-semibold text-green-600"><i class="fa-solid fa-coins"></i> 1500</span>
       </div>
       
-      <div class="flex items-center bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
-        <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-1">Bonus Cash Points Earned</span>
-          <span class="text-[28px] mt-0 font-semibold text-sec-500">500</span>
-        </div>
+      <div class="flex flex-col justify-center items-center bg-white border border-slate-200 rounded p-4">
+          <span class="text-[12px] text-slate-500 mt-2 mb-3">Bonus Cash Points</span>
+          <span class="flex flex-row items-center gap-2 text-[24px] mb-2 font-semibold text-green-600"><i class="fa-solid fa-coins"></i> 500</span>
       </div>
 
-      <div class="flex items-center bg-gradient-to-b from-sec-50 to-sec-100 border border-sec-200 rounded">
-        <div class="flex flex-col self-center p-3">
-          <span class="text-[14px] text-slate-600 mt-2 mb-1">Cashback From Vendors Earned</span>
-          <span class="text-[28px] mt-0 font-semibold text-sec-500">500</span>
-        </div>
+      <div class="flex flex-col justify-center items-center bg-white border border-slate-200 rounded p-4">
+          <span class="text-[12px] text-slate-500 mt-2 mb-3">Cashback From Vendors</span>
+          <span class="flex flex-row items-center gap-2 text-[24px] mb-2 font-semibold text-green-600"><i class="fa-solid fa-coins"></i> 240</span>
       </div>
     </div>
   </div>

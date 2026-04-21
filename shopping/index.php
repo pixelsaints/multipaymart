@@ -116,27 +116,27 @@ $offers = [
   <section class="my-8">
     <div class="container">
       <div class="flex flex-row items-center justify-between pt-3">
-        <h3 class="font-medium">Popular Stores</h3>
+        <h3 class="font-medium">Popular Shopping Sites</h3>
         <a href="<?= BASE_URL ?>/vouchers" class="more-link">View All <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
       <div class="grid grid-cols-3 gap-3 mt-4">
-        <a href="#" class="shopping-card">
+        <a href="#" class="shopping-site">
           <img class="translate-y-1" src="../assets/images/brands/amazon.png" alt="">
         </a>
-        <a href="#" class="shopping-card">
-          <img class="h-[40px] w-auto" src="../assets/images/brands/flipkart.png" alt="">
+        <a href="#" class="shopping-site">
+          <img class="h-[40px] w-auto" src="../assets/images/brands/flipkart-logo.svg" alt="">
         </a>
-        <a href="#" class="shopping-card">
+        <a href="#" class="shopping-site">
           <img class="h-[60px] w-auto" src="../assets/images/brands/myntra.png" alt="">
         </a>
-        <a href="#" class="shopping-card">
+        <a href="#" class="shopping-site">
           <img class="" src="../assets/images/brands/nykaa.png" alt="">
         </a>
-        <a href="#" class="shopping-card">
+        <a href="#" class="shopping-site">
           <img class="scale-[1.1]" src="../assets/images/brands/pantaloons.png" alt="">
         </a>
-        <a href="#" class="shopping-card">
+        <a href="#" class="shopping-site">
           <img class="h-[56px] w-auto" src="../assets/images/brands/unilever.png" alt="">
         </a>
       </div>

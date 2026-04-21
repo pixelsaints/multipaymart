@@ -119,7 +119,7 @@ include '../components/header.php';
     <div class="grid grid-cols-2 gap-4 mb-8">
       <?php foreach ($partners as $partner): ?>
         
-        <a href="./partener-details.php" class="partner-list-card">
+        <a href="./partner-details.php" class="partner-list-card">
           <div class="image relative">
             <img src="<?= $partner['image'] ?>" alt="">
 
